@@ -7,8 +7,8 @@
 ### 📍 Muthoot Institute of Technology and Science
 
 <p align="center">
-  <img width="500" height="322" alt="acm_logo" src="https://github.com/user-attachments/assets/dce73ce8-25bf-443a-87f3-843b3bee4b31" />
-
+  <img src="https://github.com/user-attachments/assets/dce73ce8-25bf-443a-87f3-843b3bee4b31" width="500"/>
+  <img src="https://github.com/user-attachments/assets/bab31d1f-841e-438b-b9fe-6c486f3c895a" width="250"/>
 </p>
 
 ---
