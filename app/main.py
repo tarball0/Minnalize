@@ -1,23 +1,37 @@
 from pathlib import Path
 import json
+import hashlib
+import re
 from datetime import datetime
 
 from app.image_convertor import bytes_to_grayscale_image
 from app.pe_features import extract_pe_features
 from app.scorer import compute_suspicion_score
 from app.explain import build_explanation
-from app.cnn_model import analyze_image_with_malware_cnn
+from app.cnn_model import analyze_image_with_pretrained_cnn
 
-MAX_IMAGE_BYTES = 8 * 1024 * 1024
-MALWARE_CNN_WEIGHTS = Path("app/models/malware_cnn_resnet18.pth")
+MAX_IMAGE_BYTES = 8 * 1024 * 1024  # up to 8 MB sampled for image generation
+
+
+def _safe_name(name: str) -> str:
+    cleaned = re.sub(r"[^A-Za-z0-9._-]+", "_", name).strip("._")
+    return cleaned or "file"
+
+
+def _unique_output_id(file_path: Path) -> str:
+    stat = file_path.stat()
+    raw = f"{file_path.resolve()}|{stat.st_size}|{stat.st_mtime_ns}"
+    digest = hashlib.sha256(raw.encode("utf-8")).hexdigest()[:10]
+    stamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    return f"{_safe_name(file_path.stem)}_{stamp}_{digest}"
 
 
 def analyze_file(file_path: str) -> dict:
     file_path = Path(file_path)
-    file_stem = file_path.stem
+    output_id = _unique_output_id(file_path)
 
-    image_output = Path("outputs/images") / f"{file_stem}.png"
-    report_output = Path("outputs/reports") / f"{file_stem}.json"
+    image_output = Path("outputs/images") / f"{output_id}.png"
+    report_output = Path("outputs/reports") / f"{output_id}.json"
 
     image_info = bytes_to_grayscale_image(
         str(file_path),
@@ -26,10 +40,7 @@ def analyze_file(file_path: str) -> dict:
     )
 
     pe_info = extract_pe_features(str(file_path))
-    cnn_info = analyze_image_with_malware_cnn(
-        image_info["image_path"],
-        weights_path=MALWARE_CNN_WEIGHTS,
-    )
+    cnn_info = analyze_image_with_pretrained_cnn(image_info["image_path"])
     score_info = compute_suspicion_score(pe_info, cnn_info)
     explanation = build_explanation(pe_info, score_info, image_info, cnn_info)
 
