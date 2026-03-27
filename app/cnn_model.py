@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import math
 from typing import Any
 
 import numpy as np
@@ -44,10 +43,33 @@ def _edge_density(gray_array: np.ndarray) -> float:
     return (gx_mean + gy_mean) / 2.0
 
 
+def _block_variance(gray_array: np.ndarray, block_size: int = 16) -> float:
+    if gray_array.ndim != 2 or gray_array.size == 0:
+        return 0.0
+
+    height, width = gray_array.shape
+    usable_h = (height // block_size) * block_size
+    usable_w = (width // block_size) * block_size
+
+    if usable_h == 0 or usable_w == 0:
+        return 0.0
+
+    cropped = gray_array[:usable_h, :usable_w]
+    blocks = cropped.reshape(
+        usable_h // block_size,
+        block_size,
+        usable_w // block_size,
+        block_size,
+    ).transpose(0, 2, 1, 3)
+
+    block_means = blocks.mean(axis=(2, 3))
+    return float(block_means.var())
+
+
 def _label_from_score(score: int) -> str:
-    if score >= 70:
+    if score >= 75:
         return "Strong visual anomaly"
-    if score >= 40:
+    if score >= 50:
         return "Moderate visual anomaly"
     return "Low visual anomaly"
 
@@ -55,16 +77,41 @@ def _label_from_score(score: int) -> str:
 def _score_from_metrics(
     image_entropy: float,
     edge_density: float,
-    natural_image_confidence: float,
-    activation_mean: float,
-) -> int:
-    entropy_score = np.clip((image_entropy - 6.0) / 2.0, 0.0, 1.0) * 45.0
-    edge_score = np.clip((edge_density - 0.05) / 0.20, 0.0, 1.0) * 25.0
-    confidence_score = np.clip(1.0 - natural_image_confidence, 0.0, 1.0) * 20.0
-    activation_score = np.clip(activation_mean / 1.5, 0.0, 1.0) * 10.0
+    block_variance: float,
+    activation_std: float,
+) -> tuple[int, int]:
+    score = 0.0
+    strong_signal_count = 0
 
-    total = entropy_score + edge_score + confidence_score + activation_score
-    return int(round(min(100.0, total)))
+    if image_entropy >= 7.3:
+        score += 35.0
+        strong_signal_count += 1
+    elif image_entropy >= 7.0:
+        score += 22.0
+    elif image_entropy >= 6.8:
+        score += 10.0
+
+    if edge_density >= 0.18:
+        score += 25.0
+        strong_signal_count += 1
+    elif edge_density >= 0.14:
+        score += 15.0
+    elif edge_density >= 0.10:
+        score += 8.0
+
+    if block_variance >= 0.020:
+        score += 18.0
+        strong_signal_count += 1
+    elif block_variance >= 0.012:
+        score += 10.0
+
+    if activation_std >= 1.20:
+        score += 12.0
+        strong_signal_count += 1
+    elif activation_std >= 0.95:
+        score += 7.0
+
+    return int(round(min(100.0, score))), strong_signal_count
 
 
 def _build_pretrained_resnet18():
@@ -105,21 +152,19 @@ def _build_pretrained_resnet18():
         ) from exc
 
     feature_extractor = torch.nn.Sequential(*list(model.children())[:-1])
-
-    model.eval().to(device)
     feature_extractor.eval().to(device)
 
-    return torch, model, feature_extractor, preprocess, device, weights_name
+    return torch, feature_extractor, preprocess, device, weights_name
 
 
 def analyze_image_with_pretrained_cnn(image_path: str) -> dict[str, Any]:
     try:
-        torch, model, feature_extractor, preprocess, device, weights_name = _build_pretrained_resnet18()
+        torch, feature_extractor, preprocess, device, weights_name = _build_pretrained_resnet18()
     except Exception as exc:
         return {
             "available": False,
             "status": "cnn_unavailable",
-            "model_name": "resnet18",
+            "model_name": "resnet18_feature_extractor",
             "weights": None,
             "pretrained": True,
             "malware_specific": False,
@@ -128,8 +173,10 @@ def analyze_image_with_pretrained_cnn(image_path: str) -> dict[str, Any]:
             "natural_image_confidence": None,
             "image_entropy": None,
             "edge_density": None,
+            "block_variance": None,
             "activation_mean": None,
             "activation_std": None,
+            "strong_signal_count": 0,
             "reasons": [],
             "error": str(exc),
         }
@@ -141,7 +188,7 @@ def analyze_image_with_pretrained_cnn(image_path: str) -> dict[str, Any]:
         return {
             "available": False,
             "status": "image_load_failed",
-            "model_name": "resnet18",
+            "model_name": "resnet18_feature_extractor",
             "weights": weights_name,
             "pretrained": True,
             "malware_specific": False,
@@ -150,8 +197,10 @@ def analyze_image_with_pretrained_cnn(image_path: str) -> dict[str, Any]:
             "natural_image_confidence": None,
             "image_entropy": None,
             "edge_density": None,
+            "block_variance": None,
             "activation_mean": None,
             "activation_std": None,
+            "strong_signal_count": 0,
             "reasons": [],
             "error": f"Could not load grayscale image: {exc}",
         }
@@ -159,62 +208,64 @@ def analyze_image_with_pretrained_cnn(image_path: str) -> dict[str, Any]:
     tensor = preprocess(rgb_img).unsqueeze(0).to(device)
 
     with torch.no_grad():
-        logits = model(tensor)
-        probs = torch.softmax(logits, dim=1)
-        top_prob, _ = probs.max(dim=1)
-
         embedding = feature_extractor(tensor).flatten(1)
 
     gray_array = np.asarray(gray_img, dtype=np.float32) / 255.0
 
     image_entropy = _grayscale_entropy(gray_array)
     edge_density = _edge_density(gray_array)
-    natural_image_confidence = float(top_prob.item())
+    block_variance = _block_variance(gray_array)
     activation_mean = float(embedding.abs().mean().item())
     activation_std = float(embedding.std().item())
 
-    visual_score = _score_from_metrics(
+    visual_score, strong_signal_count = _score_from_metrics(
         image_entropy=image_entropy,
         edge_density=edge_density,
-        natural_image_confidence=natural_image_confidence,
-        activation_mean=activation_mean,
+        block_variance=block_variance,
+        activation_std=activation_std,
     )
 
     reasons: list[str] = []
 
-    if image_entropy >= 7.0:
-        reasons.append("The byte image has high grayscale entropy, which is common in packed or compressed binaries.")
-    elif image_entropy >= 6.5:
-        reasons.append("The byte image has moderately high grayscale entropy.")
+    if image_entropy >= 7.3:
+        reasons.append("The byte image has very high grayscale entropy, which is common in packed or compressed binaries.")
+    elif image_entropy >= 7.0:
+        reasons.append("The byte image has high grayscale entropy.")
+    elif image_entropy >= 6.8:
+        reasons.append("The byte image has mildly elevated grayscale entropy.")
 
-    if edge_density >= 0.12:
-        reasons.append("The byte image shows abrupt texture transitions and dense local changes.")
-    elif edge_density >= 0.08:
-        reasons.append("The byte image has moderate edge density.")
+    if edge_density >= 0.18:
+        reasons.append("The byte image shows dense abrupt transitions.")
+    elif edge_density >= 0.14:
+        reasons.append("The byte image shows moderately strong local transitions.")
 
-    if natural_image_confidence <= 0.15:
-        reasons.append("The pretrained natural-image CNN is not confident on this texture, suggesting it is far from ordinary image structure.")
+    if block_variance >= 0.020:
+        reasons.append("Large block-to-block intensity variation was observed.")
+    elif block_variance >= 0.012:
+        reasons.append("Moderate block-level variation was observed.")
 
-    if activation_mean >= 1.0:
-        reasons.append("Deep CNN feature activations are relatively strong for this byte-image pattern.")
+    if activation_std >= 1.20:
+        reasons.append("Deep CNN features are unusually dispersed for this byte-image texture.")
 
     if not reasons:
-        reasons.append("The pretrained CNN did not detect a strong visual anomaly in the grayscale byte image.")
+        reasons.append("The visual texture did not show a strong anomaly.")
 
     return {
         "available": True,
         "status": "ok",
-        "model_name": "resnet18",
+        "model_name": "resnet18_feature_extractor",
         "weights": weights_name,
         "pretrained": True,
         "malware_specific": False,
         "visual_score": visual_score,
         "visual_label": _label_from_score(visual_score),
-        "natural_image_confidence": round(natural_image_confidence, 4),
+        "natural_image_confidence": None,
         "image_entropy": round(image_entropy, 4),
         "edge_density": round(edge_density, 4),
+        "block_variance": round(block_variance, 4),
         "activation_mean": round(activation_mean, 4),
         "activation_std": round(activation_std, 4),
+        "strong_signal_count": strong_signal_count,
         "reasons": reasons,
         "error": None,
     }
