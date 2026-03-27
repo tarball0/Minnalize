@@ -1,0 +1,3725 @@
+[
+  {
+    "alert_id": "NG-000001",
+    "timestamp": "2026-03-01T06:56:34",
+    "user_id": "user_042",
+    "event_type": "NETWORK_TRANSFER",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.8252,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.682,
+      "isolation_forest": 0.65,
+      "behavioral": 0.2708
+    },
+    "description": "Anomalous NETWORK_TRANSFER detected for user_042. Flagged by: Autoencoder (reconstruction), LSTM (sequence). High model agreement (3/4 detectors triggered).",
+    "source_host": "host-02.internal",
+    "dest_ip": "10.0.139.40"
+  },
+  {
+    "alert_id": "NG-000002",
+    "timestamp": "2026-03-01T07:28:36",
+    "user_id": "user_007",
+    "event_type": "LOGOUT",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7832,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.5293,
+      "isolation_forest": 0.6101,
+      "behavioral": 0.3491
+    },
+    "description": "Anomalous LOGOUT detected for user_007. Flagged by: Autoencoder (reconstruction), Isolation Forest (statistical). High model agreement (3/4 detectors triggered).",
+    "source_host": "host-10.internal",
+    "dest_ip": "10.0.219.211"
+  },
+  {
+    "alert_id": "NG-000003",
+    "timestamp": "2026-03-01T08:23:49",
+    "user_id": "user_006",
+    "event_type": "LOGOUT",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.826,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.8274,
+      "isolation_forest": 0.5528,
+      "behavioral": 0.115
+    },
+    "description": "Anomalous LOGOUT detected for user_006. Flagged by: Autoencoder (reconstruction), LSTM (sequence). High model agreement (3/4 detectors triggered).",
+    "source_host": "host-01.internal",
+    "dest_ip": "10.0.131.33"
+  },
+  {
+    "alert_id": "NG-000004",
+    "timestamp": "2026-03-01T08:27:08",
+    "user_id": "user_026",
+    "event_type": "LOGOUT",
+    "risk_level": "SEVERE",
+    "ensemble_score": 0.8669,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.5338,
+      "behavioral": 0.0672
+    },
+    "description": "Anomalous LOGOUT detected for user_026. Flagged by: Autoencoder (reconstruction), LSTM (sequence). High model agreement (3/4 detectors triggered).",
+    "source_host": "host-09.internal",
+    "dest_ip": "10.0.103.209"
+  },
+  {
+    "alert_id": "NG-000005",
+    "timestamp": "2026-03-01T08:54:50",
+    "user_id": "user_024",
+    "event_type": "PRIVILEGE_ESCALATION",
+    "risk_level": "SEVERE",
+    "ensemble_score": 0.9004,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.5588,
+      "behavioral": 0.2573
+    },
+    "description": "Anomalous PRIVILEGE_ESCALATION detected for user_024. Flagged by: Autoencoder (reconstruction), LSTM (sequence). High model agreement (3/4 detectors triggered).",
+    "source_host": "host-00.internal",
+    "dest_ip": "10.0.226.17"
+  },
+  {
+    "alert_id": "NG-000006",
+    "timestamp": "2026-03-01T09:05:35",
+    "user_id": "user_016",
+    "event_type": "USB_INSERT",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7668,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.5837,
+      "isolation_forest": 0.6396,
+      "behavioral": 0.092
+    },
+    "description": "Anomalous USB_INSERT detected for user_016. Flagged by: Autoencoder (reconstruction), Isolation Forest (statistical). High model agreement (3/4 detectors triggered).",
+    "source_host": "host-14.internal",
+    "dest_ip": "10.0.23.197"
+  },
+  {
+    "alert_id": "NG-000007",
+    "timestamp": "2026-03-01T13:35:20",
+    "user_id": "user_036",
+    "event_type": "FILE_ACCESS",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7083,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.8493,
+      "isolation_forest": 0.4077,
+      "behavioral": 0.1465
+    },
+    "description": "Anomalous FILE_ACCESS detected for user_036. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-10.internal",
+    "dest_ip": "10.0.219.211"
+  },
+  {
+    "alert_id": "NG-000008",
+    "timestamp": "2026-03-02T00:40:24",
+    "user_id": "user_035",
+    "event_type": "LOGIN",
+    "risk_level": "HIGH",
+    "ensemble_score": 0.656,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.5635,
+      "isolation_forest": 0.3747,
+      "behavioral": 0.4131
+    },
+    "description": "Anomalous LOGIN detected for user_035. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-14.internal",
+    "dest_ip": "10.0.71.161"
+  },
+  {
+    "alert_id": "NG-000009",
+    "timestamp": "2026-03-02T02:06:53",
+    "user_id": "user_047",
+    "event_type": "DB_QUERY",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.8044,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.4637,
+      "behavioral": 0.411
+    },
+    "description": "Anomalous DB_QUERY detected for user_047. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-04.internal",
+    "dest_ip": "10.0.226.17"
+  },
+  {
+    "alert_id": "NG-000010",
+    "timestamp": "2026-03-02T02:07:15",
+    "user_id": "user_041",
+    "event_type": "FILE_DELETE",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7343,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2236,
+      "behavioral": 0.2635
+    },
+    "description": "Anomalous FILE_DELETE detected for user_041. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-00.internal",
+    "dest_ip": "10.0.115.58"
+  },
+  {
+    "alert_id": "NG-000011",
+    "timestamp": "2026-03-02T02:59:24",
+    "user_id": "user_019",
+    "event_type": "NETWORK_TRANSFER",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7544,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2555,
+      "behavioral": 0.3554
+    },
+    "description": "Anomalous NETWORK_TRANSFER detected for user_019. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-09.internal",
+    "dest_ip": "10.0.103.209"
+  },
+  {
+    "alert_id": "NG-000012",
+    "timestamp": "2026-03-02T03:02:19",
+    "user_id": "user_004",
+    "event_type": "LOGIN",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7356,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.8437,
+      "isolation_forest": 0.4223,
+      "behavioral": 0.3198
+    },
+    "description": "Anomalous LOGIN detected for user_004. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-02.internal",
+    "dest_ip": "10.0.42.193"
+  },
+  {
+    "alert_id": "NG-000013",
+    "timestamp": "2026-03-02T03:08:52",
+    "user_id": "user_005",
+    "event_type": "NETWORK_CONNECT",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7441,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.9753,
+      "isolation_forest": 0.2075,
+      "behavioral": 0.4001
+    },
+    "description": "Anomalous NETWORK_CONNECT detected for user_005. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-07.internal",
+    "dest_ip": "10.0.71.161"
+  },
+  {
+    "alert_id": "NG-000014",
+    "timestamp": "2026-03-02T03:24:50",
+    "user_id": "user_011",
+    "event_type": "NETWORK_TRANSFER",
+    "risk_level": "SEVERE",
+    "ensemble_score": 1.0,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.7551,
+      "behavioral": 0.5479
+    },
+    "description": "Anomalous NETWORK_TRANSFER detected for user_011. Flagged by: Autoencoder (reconstruction), LSTM (sequence). High model agreement (4/4 detectors triggered). Large data transfer: 33,970,462 bytes.",
+    "source_host": "host-09.internal",
+    "dest_ip": "187.98.229.74"
+  },
+  {
+    "alert_id": "NG-000015",
+    "timestamp": "2026-03-02T03:39:09",
+    "user_id": "user_049",
+    "event_type": "NETWORK_TRANSFER",
+    "risk_level": "SEVERE",
+    "ensemble_score": 1.0,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.8157,
+      "behavioral": 0.5357
+    },
+    "description": "Anomalous NETWORK_TRANSFER detected for user_049. Flagged by: Autoencoder (reconstruction), LSTM (sequence). High model agreement (4/4 detectors triggered). Large data transfer: 32,568,048 bytes.",
+    "source_host": "host-11.internal",
+    "dest_ip": "105.179.70.199"
+  },
+  {
+    "alert_id": "NG-000016",
+    "timestamp": "2026-03-02T03:41:16",
+    "user_id": "user_023",
+    "event_type": "PROCESS_SPAWN",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7455,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2547,
+      "behavioral": 0.2969
+    },
+    "description": "Anomalous PROCESS_SPAWN detected for user_023. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-00.internal",
+    "dest_ip": "10.0.93.119"
+  },
+  {
+    "alert_id": "NG-000017",
+    "timestamp": "2026-03-02T03:44:02",
+    "user_id": "user_033",
+    "event_type": "FILE_DELETE",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.741,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.9845,
+      "isolation_forest": 0.1891,
+      "behavioral": 0.3855
+    },
+    "description": "Anomalous FILE_DELETE detected for user_033. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-14.internal",
+    "dest_ip": "10.0.52.24"
+  },
+  {
+    "alert_id": "NG-000018",
+    "timestamp": "2026-03-02T03:54:09",
+    "user_id": "user_043",
+    "event_type": "FILE_DELETE",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.75,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2527,
+      "behavioral": 0.3295
+    },
+    "description": "Anomalous FILE_DELETE detected for user_043. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-13.internal",
+    "dest_ip": "10.0.24.141"
+  },
+  {
+    "alert_id": "NG-000019",
+    "timestamp": "2026-03-02T03:55:23",
+    "user_id": "user_032",
+    "event_type": "NETWORK_TRANSFER",
+    "risk_level": "SEVERE",
+    "ensemble_score": 0.9469,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.6154,
+      "behavioral": 0.4919
+    },
+    "description": "Anomalous NETWORK_TRANSFER detected for user_032. Flagged by: Autoencoder (reconstruction), LSTM (sequence). High model agreement (3/4 detectors triggered). Large data transfer: 9,542,505 bytes.",
+    "source_host": "host-02.internal",
+    "dest_ip": "17.119.202.49"
+  },
+  {
+    "alert_id": "NG-000020",
+    "timestamp": "2026-03-02T04:36:05",
+    "user_id": "user_008",
+    "event_type": "PROCESS_SPAWN",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.742,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1874,
+      "behavioral": 0.3637
+    },
+    "description": "Anomalous PROCESS_SPAWN detected for user_008. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-03.internal",
+    "dest_ip": "10.0.189.174"
+  },
+  {
+    "alert_id": "NG-000021",
+    "timestamp": "2026-03-02T04:46:51",
+    "user_id": "user_017",
+    "event_type": "FILE_MODIFY",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7687,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2973,
+      "behavioral": 0.3946
+    },
+    "description": "Anomalous FILE_MODIFY detected for user_017. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-12.internal",
+    "dest_ip": "10.0.115.58"
+  },
+  {
+    "alert_id": "NG-000022",
+    "timestamp": "2026-03-02T05:00:22",
+    "user_id": "user_031",
+    "event_type": "FILE_DELETE",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7367,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2404,
+      "behavioral": 0.2577
+    },
+    "description": "Anomalous FILE_DELETE detected for user_031. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-10.internal",
+    "dest_ip": "10.0.131.33"
+  },
+  {
+    "alert_id": "NG-000023",
+    "timestamp": "2026-03-02T05:24:08",
+    "user_id": "user_012",
+    "event_type": "FILE_ACCESS",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7616,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.3696,
+      "behavioral": 0.251
+    },
+    "description": "Anomalous FILE_ACCESS detected for user_012. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-12.internal",
+    "dest_ip": "10.0.199.164"
+  },
+  {
+    "alert_id": "NG-000024",
+    "timestamp": "2026-03-02T05:39:08",
+    "user_id": "user_034",
+    "event_type": "NETWORK_CONNECT",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7396,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2255,
+      "behavioral": 0.2964
+    },
+    "description": "Anomalous NETWORK_CONNECT detected for user_034. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-14.internal",
+    "dest_ip": "10.0.71.161"
+  },
+  {
+    "alert_id": "NG-000025",
+    "timestamp": "2026-03-02T06:05:29",
+    "user_id": "user_010",
+    "event_type": "PROCESS_SPAWN",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7554,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.3396,
+      "behavioral": 0.2499
+    },
+    "description": "Anomalous PROCESS_SPAWN detected for user_010. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-02.internal",
+    "dest_ip": "10.0.226.17"
+  },
+  {
+    "alert_id": "NG-000026",
+    "timestamp": "2026-03-02T06:24:41",
+    "user_id": "user_046",
+    "event_type": "PRIVILEGE_ESCALATION",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7341,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1793,
+      "behavioral": 0.3215
+    },
+    "description": "Anomalous PRIVILEGE_ESCALATION detected for user_046. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-14.internal",
+    "dest_ip": "10.0.173.198"
+  },
+  {
+    "alert_id": "NG-000027",
+    "timestamp": "2026-03-02T06:26:04",
+    "user_id": "user_022",
+    "event_type": "PRIVILEGE_ESCALATION",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7178,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2372,
+      "behavioral": 0.1358
+    },
+    "description": "Anomalous PRIVILEGE_ESCALATION detected for user_022. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-13.internal",
+    "dest_ip": "10.0.52.24"
+  },
+  {
+    "alert_id": "NG-000028",
+    "timestamp": "2026-03-02T06:26:50",
+    "user_id": "user_003",
+    "event_type": "FILE_MODIFY",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7406,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2075,
+      "behavioral": 0.3275
+    },
+    "description": "Anomalous FILE_MODIFY detected for user_003. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-12.internal",
+    "dest_ip": "10.0.167.112"
+  },
+  {
+    "alert_id": "NG-000029",
+    "timestamp": "2026-03-02T06:31:16",
+    "user_id": "user_015",
+    "event_type": "NETWORK_TRANSFER",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7398,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1649,
+      "behavioral": 0.3786
+    },
+    "description": "Anomalous NETWORK_TRANSFER detected for user_015. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-14.internal",
+    "dest_ip": "10.0.93.119"
+  },
+  {
+    "alert_id": "NG-000030",
+    "timestamp": "2026-03-02T06:33:30",
+    "user_id": "user_027",
+    "event_type": "FILE_MODIFY",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7072,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1904,
+      "behavioral": 0.1275
+    },
+    "description": "Anomalous FILE_MODIFY detected for user_027. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-06.internal",
+    "dest_ip": "10.0.199.164"
+  },
+  {
+    "alert_id": "NG-000031",
+    "timestamp": "2026-03-02T07:06:13",
+    "user_id": "user_038",
+    "event_type": "FILE_ACCESS",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7626,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.4225,
+      "behavioral": 0.1874
+    },
+    "description": "Anomalous FILE_ACCESS detected for user_038. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-12.internal",
+    "dest_ip": "10.0.167.112"
+  },
+  {
+    "alert_id": "NG-000032",
+    "timestamp": "2026-03-02T07:50:54",
+    "user_id": "user_013",
+    "event_type": "USB_INSERT",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7077,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.8698,
+      "isolation_forest": 0.3072,
+      "behavioral": 0.2358
+    },
+    "description": "Anomalous USB_INSERT detected for user_013. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-14.internal",
+    "dest_ip": "10.0.71.161"
+  },
+  {
+    "alert_id": "NG-000033",
+    "timestamp": "2026-03-02T07:55:57",
+    "user_id": "user_016",
+    "event_type": "CONFIG_CHANGE",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7345,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2249,
+      "behavioral": 0.2631
+    },
+    "description": "Anomalous CONFIG_CHANGE detected for user_016. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-03.internal",
+    "dest_ip": "10.0.71.161"
+  },
+  {
+    "alert_id": "NG-000034",
+    "timestamp": "2026-03-02T08:20:16",
+    "user_id": "user_018",
+    "event_type": "REGISTRY_MODIFY",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7218,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1884,
+      "behavioral": 0.2275
+    },
+    "description": "Anomalous REGISTRY_MODIFY detected for user_018. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-00.internal",
+    "dest_ip": "10.0.167.112"
+  },
+  {
+    "alert_id": "NG-000035",
+    "timestamp": "2026-03-02T08:54:08",
+    "user_id": "user_040",
+    "event_type": "FILE_DELETE",
+    "risk_level": "HIGH",
+    "ensemble_score": 0.6928,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1602,
+      "behavioral": 0.0716
+    },
+    "description": "Anomalous FILE_DELETE detected for user_040. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-03.internal",
+    "dest_ip": "10.0.187.194"
+  },
+  {
+    "alert_id": "NG-000036",
+    "timestamp": "2026-03-02T08:58:11",
+    "user_id": "user_020",
+    "event_type": "NETWORK_CONNECT",
+    "risk_level": "HIGH",
+    "ensemble_score": 0.6934,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1598,
+      "behavioral": 0.0762
+    },
+    "description": "Anomalous NETWORK_CONNECT detected for user_020. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-10.internal",
+    "dest_ip": "10.0.214.115"
+  },
+  {
+    "alert_id": "NG-000037",
+    "timestamp": "2026-03-02T10:40:42",
+    "user_id": "user_011",
+    "event_type": "LOGOUT",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7242,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.9222,
+      "isolation_forest": 0.4234,
+      "behavioral": 0.0859
+    },
+    "description": "Anomalous LOGOUT detected for user_011. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-10.internal",
+    "dest_ip": "10.0.52.24"
+  },
+  {
+    "alert_id": "NG-000038",
+    "timestamp": "2026-03-02T22:04:06",
+    "user_id": "user_029",
+    "event_type": "FILE_ACCESS",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7361,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.8391,
+      "isolation_forest": 0.4335,
+      "behavioral": 0.3179
+    },
+    "description": "Anomalous FILE_ACCESS detected for user_029. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-05.internal",
+    "dest_ip": "10.0.24.141"
+  },
+  {
+    "alert_id": "NG-000039",
+    "timestamp": "2026-03-03T00:08:38",
+    "user_id": "user_001",
+    "event_type": "FILE_MODIFY",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.762,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2758,
+      "behavioral": 0.3791
+    },
+    "description": "Anomalous FILE_MODIFY detected for user_001. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-09.internal",
+    "dest_ip": "10.0.183.200"
+  },
+  {
+    "alert_id": "NG-000040",
+    "timestamp": "2026-03-03T00:11:12",
+    "user_id": "user_042",
+    "event_type": "FILE_ACCESS",
+    "risk_level": "HIGH",
+    "ensemble_score": 0.6502,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.6975,
+      "isolation_forest": 0.2923,
+      "behavioral": 0.217
+    },
+    "description": "Anomalous FILE_ACCESS detected for user_042. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-14.internal",
+    "dest_ip": "10.0.187.194"
+  },
+  {
+    "alert_id": "NG-000041",
+    "timestamp": "2026-03-03T00:21:56",
+    "user_id": "user_017",
+    "event_type": "FILE_DELETE",
+    "risk_level": "HIGH",
+    "ensemble_score": 0.6685,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.7439,
+      "isolation_forest": 0.2156,
+      "behavioral": 0.348
+    },
+    "description": "Anomalous FILE_DELETE detected for user_017. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-04.internal",
+    "dest_ip": "10.0.23.197"
+  },
+  {
+    "alert_id": "NG-000042",
+    "timestamp": "2026-03-03T00:43:40",
+    "user_id": "user_011",
+    "event_type": "LOGOUT",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7412,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2996,
+      "behavioral": 0.2082
+    },
+    "description": "Anomalous LOGOUT detected for user_011. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-07.internal",
+    "dest_ip": "10.0.110.219"
+  },
+  {
+    "alert_id": "NG-000043",
+    "timestamp": "2026-03-03T01:19:35",
+    "user_id": "user_048",
+    "event_type": "NETWORK_TRANSFER",
+    "risk_level": "HIGH",
+    "ensemble_score": 0.6779,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.8187,
+      "isolation_forest": 0.2325,
+      "behavioral": 0.2384
+    },
+    "description": "Anomalous NETWORK_TRANSFER detected for user_048. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-04.internal",
+    "dest_ip": "10.0.173.198"
+  },
+  {
+    "alert_id": "NG-000044",
+    "timestamp": "2026-03-03T01:29:10",
+    "user_id": "user_045",
+    "event_type": "FILE_ACCESS",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7506,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.3075,
+      "behavioral": 0.2609
+    },
+    "description": "Anomalous FILE_ACCESS detected for user_045. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-14.internal",
+    "dest_ip": "10.0.47.236"
+  },
+  {
+    "alert_id": "NG-000045",
+    "timestamp": "2026-03-03T01:56:56",
+    "user_id": "user_044",
+    "event_type": "FILE_ACCESS",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.734,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2114,
+      "behavioral": 0.2783
+    },
+    "description": "Anomalous FILE_ACCESS detected for user_044. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-11.internal",
+    "dest_ip": "10.0.226.17"
+  },
+  {
+    "alert_id": "NG-000046",
+    "timestamp": "2026-03-03T03:03:41",
+    "user_id": "user_041",
+    "event_type": "CONFIG_CHANGE",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7336,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2396,
+      "behavioral": 0.2378
+    },
+    "description": "Anomalous CONFIG_CHANGE detected for user_041. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-00.internal",
+    "dest_ip": "10.0.93.119"
+  },
+  {
+    "alert_id": "NG-000047",
+    "timestamp": "2026-03-03T04:05:33",
+    "user_id": "user_025",
+    "event_type": "DB_QUERY",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7548,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2993,
+      "behavioral": 0.2997
+    },
+    "description": "Anomalous DB_QUERY detected for user_025. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-02.internal",
+    "dest_ip": "10.0.47.236"
+  },
+  {
+    "alert_id": "NG-000048",
+    "timestamp": "2026-03-03T04:07:24",
+    "user_id": "user_031",
+    "event_type": "FILE_MODIFY",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7082,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1527,
+      "behavioral": 0.1842
+    },
+    "description": "Anomalous FILE_MODIFY detected for user_031. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-04.internal",
+    "dest_ip": "10.0.189.174"
+  },
+  {
+    "alert_id": "NG-000049",
+    "timestamp": "2026-03-03T04:59:25",
+    "user_id": "user_033",
+    "event_type": "NETWORK_TRANSFER",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7096,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1385,
+      "behavioral": 0.2129
+    },
+    "description": "Anomalous NETWORK_TRANSFER detected for user_033. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-06.internal",
+    "dest_ip": "10.0.199.164"
+  },
+  {
+    "alert_id": "NG-000050",
+    "timestamp": "2026-03-03T05:22:57",
+    "user_id": "user_027",
+    "event_type": "CONFIG_CHANGE",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7603,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2817,
+      "behavioral": 0.3595
+    },
+    "description": "Anomalous CONFIG_CHANGE detected for user_027. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-09.internal",
+    "dest_ip": "10.0.47.236"
+  },
+  {
+    "alert_id": "NG-000051",
+    "timestamp": "2026-03-03T05:31:23",
+    "user_id": "user_006",
+    "event_type": "LOGOUT",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7129,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1611,
+      "behavioral": 0.2045
+    },
+    "description": "Anomalous LOGOUT detected for user_006. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-12.internal",
+    "dest_ip": "10.0.178.91"
+  },
+  {
+    "alert_id": "NG-000052",
+    "timestamp": "2026-03-03T05:33:36",
+    "user_id": "user_029",
+    "event_type": "NETWORK_CONNECT",
+    "risk_level": "HIGH",
+    "ensemble_score": 0.6645,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.8325,
+      "isolation_forest": 0.1132,
+      "behavioral": 0.2807
+    },
+    "description": "Anomalous NETWORK_CONNECT detected for user_029. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-11.internal",
+    "dest_ip": "10.0.139.113"
+  },
+  {
+    "alert_id": "NG-000053",
+    "timestamp": "2026-03-03T05:50:40",
+    "user_id": "user_040",
+    "event_type": "USB_INSERT",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7283,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2165,
+      "behavioral": 0.2334
+    },
+    "description": "Anomalous USB_INSERT detected for user_040. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-13.internal",
+    "dest_ip": "10.0.22.178"
+  },
+  {
+    "alert_id": "NG-000054",
+    "timestamp": "2026-03-03T06:25:14",
+    "user_id": "user_012",
+    "event_type": "NETWORK_TRANSFER",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7232,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2192,
+      "behavioral": 0.1955
+    },
+    "description": "Anomalous NETWORK_TRANSFER detected for user_012. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-13.internal",
+    "dest_ip": "10.0.183.200"
+  },
+  {
+    "alert_id": "NG-000055",
+    "timestamp": "2026-03-03T06:27:42",
+    "user_id": "user_000",
+    "event_type": "NETWORK_TRANSFER",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7115,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1898,
+      "behavioral": 0.1569
+    },
+    "description": "Anomalous NETWORK_TRANSFER detected for user_000. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-07.internal",
+    "dest_ip": "10.0.139.113"
+  },
+  {
+    "alert_id": "NG-000056",
+    "timestamp": "2026-03-03T06:38:03",
+    "user_id": "user_039",
+    "event_type": "NETWORK_CONNECT",
+    "risk_level": "HIGH",
+    "ensemble_score": 0.6985,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.0925,
+      "behavioral": 0.1999
+    },
+    "description": "Anomalous NETWORK_CONNECT detected for user_039. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-06.internal",
+    "dest_ip": "10.0.139.40"
+  },
+  {
+    "alert_id": "NG-000057",
+    "timestamp": "2026-03-03T06:57:42",
+    "user_id": "user_035",
+    "event_type": "USB_INSERT",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7245,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1364,
+      "behavioral": 0.3148
+    },
+    "description": "Anomalous USB_INSERT detected for user_035. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-10.internal",
+    "dest_ip": "10.0.128.95"
+  },
+  {
+    "alert_id": "NG-000058",
+    "timestamp": "2026-03-03T07:02:03",
+    "user_id": "user_018",
+    "event_type": "NETWORK_TRANSFER",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7173,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1967,
+      "behavioral": 0.1866
+    },
+    "description": "Anomalous NETWORK_TRANSFER detected for user_018. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-13.internal",
+    "dest_ip": "10.0.127.12"
+  },
+  {
+    "alert_id": "NG-000059",
+    "timestamp": "2026-03-03T07:10:51",
+    "user_id": "user_036",
+    "event_type": "LOGIN",
+    "risk_level": "SEVERE",
+    "ensemble_score": 0.9208,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.5387,
+      "behavioral": 0.4206
+    },
+    "description": "Anomalous LOGIN detected for user_036. Flagged by: Autoencoder (reconstruction), LSTM (sequence). High model agreement (3/4 detectors triggered).",
+    "source_host": "host-11.internal",
+    "dest_ip": "10.0.24.141"
+  },
+  {
+    "alert_id": "NG-000060",
+    "timestamp": "2026-03-03T07:13:45",
+    "user_id": "user_009",
+    "event_type": "REGISTRY_MODIFY",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7211,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2183,
+      "behavioral": 0.1831
+    },
+    "description": "Anomalous REGISTRY_MODIFY detected for user_009. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-14.internal",
+    "dest_ip": "10.0.24.141"
+  },
+  {
+    "alert_id": "NG-000061",
+    "timestamp": "2026-03-03T07:14:49",
+    "user_id": "user_038",
+    "event_type": "REGISTRY_MODIFY",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7146,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1899,
+      "behavioral": 0.1774
+    },
+    "description": "Anomalous REGISTRY_MODIFY detected for user_038. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-04.internal",
+    "dest_ip": "10.0.131.33"
+  },
+  {
+    "alert_id": "NG-000062",
+    "timestamp": "2026-03-03T07:31:52",
+    "user_id": "user_019",
+    "event_type": "LOGIN",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7167,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1366,
+      "behavioral": 0.2624
+    },
+    "description": "Anomalous LOGIN detected for user_019. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-05.internal",
+    "dest_ip": "10.0.23.197"
+  },
+  {
+    "alert_id": "NG-000063",
+    "timestamp": "2026-03-03T07:46:12",
+    "user_id": "user_016",
+    "event_type": "FILE_ACCESS",
+    "risk_level": "HIGH",
+    "ensemble_score": 0.6743,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.8989,
+      "isolation_forest": 0.1231,
+      "behavioral": 0.2001
+    },
+    "description": "Anomalous FILE_ACCESS detected for user_016. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-02.internal",
+    "dest_ip": "10.0.226.17"
+  },
+  {
+    "alert_id": "NG-000064",
+    "timestamp": "2026-03-03T07:46:28",
+    "user_id": "user_047",
+    "event_type": "FILE_MODIFY",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7162,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1348,
+      "behavioral": 0.2613
+    },
+    "description": "Anomalous FILE_MODIFY detected for user_047. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-08.internal",
+    "dest_ip": "10.0.47.236"
+  },
+  {
+    "alert_id": "NG-000065",
+    "timestamp": "2026-03-03T07:55:56",
+    "user_id": "user_022",
+    "event_type": "PRIVILEGE_ESCALATION",
+    "risk_level": "HIGH",
+    "ensemble_score": 0.6953,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1024,
+      "behavioral": 0.1653
+    },
+    "description": "Anomalous PRIVILEGE_ESCALATION detected for user_022. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-03.internal",
+    "dest_ip": "10.0.199.164"
+  },
+  {
+    "alert_id": "NG-000066",
+    "timestamp": "2026-03-03T07:58:52",
+    "user_id": "user_046",
+    "event_type": "LOGOUT",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7228,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2353,
+      "behavioral": 0.1715
+    },
+    "description": "Anomalous LOGOUT detected for user_046. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-06.internal",
+    "dest_ip": "10.0.187.194"
+  },
+  {
+    "alert_id": "NG-000067",
+    "timestamp": "2026-03-03T08:12:56",
+    "user_id": "user_008",
+    "event_type": "LOGOUT",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7101,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1377,
+      "behavioral": 0.2168
+    },
+    "description": "Anomalous LOGOUT detected for user_008. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-09.internal",
+    "dest_ip": "10.0.128.95"
+  },
+  {
+    "alert_id": "NG-000068",
+    "timestamp": "2026-03-03T08:16:26",
+    "user_id": "user_024",
+    "event_type": "NETWORK_CONNECT",
+    "risk_level": "HIGH",
+    "ensemble_score": 0.6973,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1036,
+      "behavioral": 0.1771
+    },
+    "description": "Anomalous NETWORK_CONNECT detected for user_024. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-06.internal",
+    "dest_ip": "10.0.187.194"
+  },
+  {
+    "alert_id": "NG-000069",
+    "timestamp": "2026-03-03T08:47:41",
+    "user_id": "user_002",
+    "event_type": "PRIVILEGE_ESCALATION",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7208,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1721,
+      "behavioral": 0.2423
+    },
+    "description": "Anomalous PRIVILEGE_ESCALATION detected for user_002. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-09.internal",
+    "dest_ip": "10.0.71.161"
+  },
+  {
+    "alert_id": "NG-000070",
+    "timestamp": "2026-03-03T09:01:40",
+    "user_id": "user_034",
+    "event_type": "CONFIG_CHANGE",
+    "risk_level": "HIGH",
+    "ensemble_score": 0.6536,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.8485,
+      "isolation_forest": 0.1332,
+      "behavioral": 0.1495
+    },
+    "description": "Anomalous CONFIG_CHANGE detected for user_034. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-12.internal",
+    "dest_ip": "10.0.93.119"
+  },
+  {
+    "alert_id": "NG-000071",
+    "timestamp": "2026-03-03T09:08:06",
+    "user_id": "user_003",
+    "event_type": "CONFIG_CHANGE",
+    "risk_level": "SEVERE",
+    "ensemble_score": 0.889,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.6343,
+      "behavioral": 0.0813
+    },
+    "description": "Anomalous CONFIG_CHANGE detected for user_003. Flagged by: Autoencoder (reconstruction), LSTM (sequence). High model agreement (3/4 detectors triggered).",
+    "source_host": "host-08.internal",
+    "dest_ip": "10.0.127.12"
+  },
+  {
+    "alert_id": "NG-000072",
+    "timestamp": "2026-03-03T20:14:58",
+    "user_id": "user_007",
+    "event_type": "NETWORK_TRANSFER",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7184,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1927,
+      "behavioral": 0.1991
+    },
+    "description": "Anomalous NETWORK_TRANSFER detected for user_007. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-01.internal",
+    "dest_ip": "10.0.178.91"
+  },
+  {
+    "alert_id": "NG-000073",
+    "timestamp": "2026-03-04T00:05:29",
+    "user_id": "user_032",
+    "event_type": "PRIVILEGE_ESCALATION",
+    "risk_level": "HIGH",
+    "ensemble_score": 0.6832,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.834,
+      "isolation_forest": 0.219,
+      "behavioral": 0.261
+    },
+    "description": "Anomalous PRIVILEGE_ESCALATION detected for user_032. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-07.internal",
+    "dest_ip": "10.0.139.40"
+  },
+  {
+    "alert_id": "NG-000074",
+    "timestamp": "2026-03-04T02:20:12",
+    "user_id": "user_016",
+    "event_type": "PRIVILEGE_ESCALATION",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7392,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.9774,
+      "isolation_forest": 0.2812,
+      "behavioral": 0.2652
+    },
+    "description": "Anomalous PRIVILEGE_ESCALATION detected for user_016. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-03.internal",
+    "dest_ip": "10.0.24.141"
+  },
+  {
+    "alert_id": "NG-000075",
+    "timestamp": "2026-03-04T02:25:14",
+    "user_id": "user_046",
+    "event_type": "LOGOUT",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7263,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.229,
+      "behavioral": 0.2031
+    },
+    "description": "Anomalous LOGOUT detected for user_046. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-13.internal",
+    "dest_ip": "10.0.187.194"
+  },
+  {
+    "alert_id": "NG-000076",
+    "timestamp": "2026-03-04T02:29:49",
+    "user_id": "user_011",
+    "event_type": "PROCESS_SPAWN",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7361,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.9682,
+      "isolation_forest": 0.2769,
+      "behavioral": 0.2682
+    },
+    "description": "Anomalous PROCESS_SPAWN detected for user_011. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-01.internal",
+    "dest_ip": "10.0.115.58"
+  },
+  {
+    "alert_id": "NG-000077",
+    "timestamp": "2026-03-04T02:42:49",
+    "user_id": "user_043",
+    "event_type": "FILE_ACCESS",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7253,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.9433,
+      "isolation_forest": 0.1977,
+      "behavioral": 0.3515
+    },
+    "description": "Anomalous FILE_ACCESS detected for user_043. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-11.internal",
+    "dest_ip": "10.0.114.227"
+  },
+  {
+    "alert_id": "NG-000078",
+    "timestamp": "2026-03-04T03:16:38",
+    "user_id": "user_031",
+    "event_type": "FILE_DELETE",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7325,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1368,
+      "behavioral": 0.3677
+    },
+    "description": "Anomalous FILE_DELETE detected for user_031. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-09.internal",
+    "dest_ip": "10.0.134.248"
+  },
+  {
+    "alert_id": "NG-000079",
+    "timestamp": "2026-03-04T03:17:06",
+    "user_id": "user_008",
+    "event_type": "PRIVILEGE_ESCALATION",
+    "risk_level": "HIGH",
+    "ensemble_score": 0.6525,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.6307,
+      "isolation_forest": 0.3399,
+      "behavioral": 0.3023
+    },
+    "description": "Anomalous PRIVILEGE_ESCALATION detected for user_008. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-01.internal",
+    "dest_ip": "10.0.114.227"
+  },
+  {
+    "alert_id": "NG-000080",
+    "timestamp": "2026-03-04T03:41:50",
+    "user_id": "user_045",
+    "event_type": "LOGOUT",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.704,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1792,
+      "behavioral": 0.121
+    },
+    "description": "Anomalous LOGOUT detected for user_045. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-03.internal",
+    "dest_ip": "10.0.167.112"
+  },
+  {
+    "alert_id": "NG-000081",
+    "timestamp": "2026-03-04T03:44:12",
+    "user_id": "user_028",
+    "event_type": "USB_INSERT",
+    "risk_level": "HIGH",
+    "ensemble_score": 0.6521,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.724,
+      "isolation_forest": 0.1632,
+      "behavioral": 0.3482
+    },
+    "description": "Anomalous USB_INSERT detected for user_028. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-02.internal",
+    "dest_ip": "10.0.22.178"
+  },
+  {
+    "alert_id": "NG-000082",
+    "timestamp": "2026-03-04T03:54:38",
+    "user_id": "user_009",
+    "event_type": "REGISTRY_MODIFY",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7244,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1689,
+      "behavioral": 0.2708
+    },
+    "description": "Anomalous REGISTRY_MODIFY detected for user_009. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-10.internal",
+    "dest_ip": "10.0.42.193"
+  },
+  {
+    "alert_id": "NG-000083",
+    "timestamp": "2026-03-04T04:01:44",
+    "user_id": "user_035",
+    "event_type": "FILE_MODIFY",
+    "risk_level": "HIGH",
+    "ensemble_score": 0.6608,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.7592,
+      "isolation_forest": 0.1911,
+      "behavioral": 0.2986
+    },
+    "description": "Anomalous FILE_MODIFY detected for user_035. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-02.internal",
+    "dest_ip": "10.0.214.115"
+  },
+  {
+    "alert_id": "NG-000084",
+    "timestamp": "2026-03-04T04:14:54",
+    "user_id": "user_030",
+    "event_type": "CONFIG_CHANGE",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7484,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2868,
+      "behavioral": 0.2736
+    },
+    "description": "Anomalous CONFIG_CHANGE detected for user_030. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-03.internal",
+    "dest_ip": "10.0.219.211"
+  },
+  {
+    "alert_id": "NG-000085",
+    "timestamp": "2026-03-04T04:30:46",
+    "user_id": "user_041",
+    "event_type": "LOGOUT",
+    "risk_level": "HIGH",
+    "ensemble_score": 0.6683,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.8458,
+      "isolation_forest": 0.152,
+      "behavioral": 0.2278
+    },
+    "description": "Anomalous LOGOUT detected for user_041. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-14.internal",
+    "dest_ip": "10.0.103.209"
+  },
+  {
+    "alert_id": "NG-000086",
+    "timestamp": "2026-03-04T05:41:02",
+    "user_id": "user_006",
+    "event_type": "LOGOUT",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7223,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1631,
+      "behavioral": 0.2645
+    },
+    "description": "Anomalous LOGOUT detected for user_006. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-10.internal",
+    "dest_ip": "10.0.134.248"
+  },
+  {
+    "alert_id": "NG-000087",
+    "timestamp": "2026-03-04T06:04:10",
+    "user_id": "user_033",
+    "event_type": "NETWORK_TRANSFER",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7073,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1062,
+      "behavioral": 0.2404
+    },
+    "description": "Anomalous NETWORK_TRANSFER detected for user_033. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-07.internal",
+    "dest_ip": "10.0.187.194"
+  },
+  {
+    "alert_id": "NG-000088",
+    "timestamp": "2026-03-04T06:04:50",
+    "user_id": "user_003",
+    "event_type": "PRIVILEGE_ESCALATION",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7275,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2167,
+      "behavioral": 0.2275
+    },
+    "description": "Anomalous PRIVILEGE_ESCALATION detected for user_003. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-14.internal",
+    "dest_ip": "10.0.219.211"
+  },
+  {
+    "alert_id": "NG-000089",
+    "timestamp": "2026-03-04T06:13:28",
+    "user_id": "user_021",
+    "event_type": "FILE_DELETE",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7079,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.0979,
+      "behavioral": 0.2555
+    },
+    "description": "Anomalous FILE_DELETE detected for user_021. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-09.internal",
+    "dest_ip": "10.0.24.141"
+  },
+  {
+    "alert_id": "NG-000090",
+    "timestamp": "2026-03-04T06:18:22",
+    "user_id": "user_010",
+    "event_type": "PROCESS_SPAWN",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7136,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1231,
+      "behavioral": 0.2599
+    },
+    "description": "Anomalous PROCESS_SPAWN detected for user_010. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-06.internal",
+    "dest_ip": "10.0.183.200"
+  },
+  {
+    "alert_id": "NG-000091",
+    "timestamp": "2026-03-04T06:21:11",
+    "user_id": "user_022",
+    "event_type": "CONFIG_CHANGE",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7293,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2945,
+      "behavioral": 0.1358
+    },
+    "description": "Anomalous CONFIG_CHANGE detected for user_022. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-11.internal",
+    "dest_ip": "10.0.134.248"
+  },
+  {
+    "alert_id": "NG-000092",
+    "timestamp": "2026-03-04T06:22:52",
+    "user_id": "user_049",
+    "event_type": "REGISTRY_MODIFY",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7544,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2907,
+      "behavioral": 0.3087
+    },
+    "description": "Anomalous REGISTRY_MODIFY detected for user_049. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-07.internal",
+    "dest_ip": "10.0.42.193"
+  },
+  {
+    "alert_id": "NG-000093",
+    "timestamp": "2026-03-04T06:34:26",
+    "user_id": "user_020",
+    "event_type": "PROCESS_SPAWN",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7451,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2896,
+      "behavioral": 0.2478
+    },
+    "description": "Anomalous PROCESS_SPAWN detected for user_020. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-10.internal",
+    "dest_ip": "10.0.226.17"
+  },
+  {
+    "alert_id": "NG-000094",
+    "timestamp": "2026-03-04T06:39:06",
+    "user_id": "user_004",
+    "event_type": "FILE_MODIFY",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7216,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1335,
+      "behavioral": 0.299
+    },
+    "description": "Anomalous FILE_MODIFY detected for user_004. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-10.internal",
+    "dest_ip": "10.0.24.141"
+  },
+  {
+    "alert_id": "NG-000095",
+    "timestamp": "2026-03-04T07:23:16",
+    "user_id": "user_042",
+    "event_type": "FILE_ACCESS",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7124,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1748,
+      "behavioral": 0.1831
+    },
+    "description": "Anomalous FILE_ACCESS detected for user_042. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-00.internal",
+    "dest_ip": "10.0.127.12"
+  },
+  {
+    "alert_id": "NG-000096",
+    "timestamp": "2026-03-04T07:33:32",
+    "user_id": "user_040",
+    "event_type": "NETWORK_TRANSFER",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7096,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.0881,
+      "behavioral": 0.2798
+    },
+    "description": "Anomalous NETWORK_TRANSFER detected for user_040. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-04.internal",
+    "dest_ip": "10.0.167.112"
+  },
+  {
+    "alert_id": "NG-000097",
+    "timestamp": "2026-03-04T07:37:41",
+    "user_id": "user_036",
+    "event_type": "USB_INSERT",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7357,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2329,
+      "behavioral": 0.2606
+    },
+    "description": "Anomalous USB_INSERT detected for user_036. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-01.internal",
+    "dest_ip": "10.0.199.164"
+  },
+  {
+    "alert_id": "NG-000098",
+    "timestamp": "2026-03-04T07:45:45",
+    "user_id": "user_047",
+    "event_type": "NETWORK_TRANSFER",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7489,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2249,
+      "behavioral": 0.3594
+    },
+    "description": "Anomalous NETWORK_TRANSFER detected for user_047. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-09.internal",
+    "dest_ip": "10.0.23.197"
+  },
+  {
+    "alert_id": "NG-000099",
+    "timestamp": "2026-03-04T07:46:44",
+    "user_id": "user_026",
+    "event_type": "PROCESS_SPAWN",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7264,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1712,
+      "behavioral": 0.2812
+    },
+    "description": "Anomalous PROCESS_SPAWN detected for user_026. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-05.internal",
+    "dest_ip": "10.0.18.247"
+  },
+  {
+    "alert_id": "NG-000100",
+    "timestamp": "2026-03-04T07:57:40",
+    "user_id": "user_048",
+    "event_type": "FILE_ACCESS",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.737,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2442,
+      "behavioral": 0.2543
+    },
+    "description": "Anomalous FILE_ACCESS detected for user_048. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-14.internal",
+    "dest_ip": "10.0.24.141"
+  },
+  {
+    "alert_id": "NG-000101",
+    "timestamp": "2026-03-04T08:42:03",
+    "user_id": "user_024",
+    "event_type": "NETWORK_TRANSFER",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7158,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1315,
+      "behavioral": 0.2635
+    },
+    "description": "Anomalous NETWORK_TRANSFER detected for user_024. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-07.internal",
+    "dest_ip": "10.0.167.112"
+  },
+  {
+    "alert_id": "NG-000102",
+    "timestamp": "2026-03-04T08:54:35",
+    "user_id": "user_015",
+    "event_type": "LOGIN",
+    "risk_level": "HIGH",
+    "ensemble_score": 0.6966,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1165,
+      "behavioral": 0.1552
+    },
+    "description": "Anomalous LOGIN detected for user_015. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-11.internal",
+    "dest_ip": "10.0.214.115"
+  },
+  {
+    "alert_id": "NG-000103",
+    "timestamp": "2026-03-04T09:02:31",
+    "user_id": "user_039",
+    "event_type": "FILE_ACCESS",
+    "risk_level": "HIGH",
+    "ensemble_score": 0.6909,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1466,
+      "behavioral": 0.0773
+    },
+    "description": "Anomalous FILE_ACCESS detected for user_039. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-13.internal",
+    "dest_ip": "10.0.18.247"
+  },
+  {
+    "alert_id": "NG-000104",
+    "timestamp": "2026-03-04T09:45:54",
+    "user_id": "user_038",
+    "event_type": "USB_INSERT",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7022,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1123,
+      "behavioral": 0.1983
+    },
+    "description": "Anomalous USB_INSERT detected for user_038. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-03.internal",
+    "dest_ip": "10.0.219.211"
+  },
+  {
+    "alert_id": "NG-000105",
+    "timestamp": "2026-03-04T09:46:08",
+    "user_id": "user_001",
+    "event_type": "NETWORK_CONNECT",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7004,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2365,
+      "behavioral": 0.0207
+    },
+    "description": "Anomalous NETWORK_CONNECT detected for user_001. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-11.internal",
+    "dest_ip": "10.0.115.58"
+  },
+  {
+    "alert_id": "NG-000106",
+    "timestamp": "2026-03-04T10:15:40",
+    "user_id": "user_007",
+    "event_type": "USB_INSERT",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.704,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1988,
+      "behavioral": 0.0953
+    },
+    "description": "Anomalous USB_INSERT detected for user_007. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-14.internal",
+    "dest_ip": "10.0.110.219"
+  },
+  {
+    "alert_id": "NG-000107",
+    "timestamp": "2026-03-04T21:30:48",
+    "user_id": "user_031",
+    "event_type": "NETWORK_TRANSFER",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7764,
+    "model_scores": {
+      "autoencoder": 0.9764,
+      "lstm": 0.3389,
+      "isolation_forest": 0.6564,
+      "behavioral": 0.6783
+    },
+    "description": "Anomalous NETWORK_TRANSFER detected for user_031. Flagged by: Autoencoder (reconstruction), Behavioral Profile. High model agreement (3/4 detectors triggered). Large data transfer: 16,629,650 bytes.",
+    "source_host": "host-01.internal",
+    "dest_ip": "9.35.62.30"
+  },
+  {
+    "alert_id": "NG-000108",
+    "timestamp": "2026-03-05T00:16:50",
+    "user_id": "user_022",
+    "event_type": "NETWORK_TRANSFER",
+    "risk_level": "SEVERE",
+    "ensemble_score": 1.0,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.6155,
+      "behavioral": 0.639
+    },
+    "description": "Anomalous NETWORK_TRANSFER detected for user_022. Flagged by: Autoencoder (reconstruction), LSTM (sequence). High model agreement (4/4 detectors triggered). Large data transfer: 8,537,178 bytes.",
+    "source_host": "host-01.internal",
+    "dest_ip": "54.174.162.36"
+  },
+  {
+    "alert_id": "NG-000109",
+    "timestamp": "2026-03-05T00:20:57",
+    "user_id": "user_032",
+    "event_type": "CONFIG_CHANGE",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7616,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.3171,
+      "behavioral": 0.321
+    },
+    "description": "Anomalous CONFIG_CHANGE detected for user_032. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-08.internal",
+    "dest_ip": "10.0.178.91"
+  },
+  {
+    "alert_id": "NG-000110",
+    "timestamp": "2026-03-05T00:55:26",
+    "user_id": "user_046",
+    "event_type": "NETWORK_TRANSFER",
+    "risk_level": "SEVERE",
+    "ensemble_score": 1.0,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.9109,
+      "isolation_forest": 0.7917,
+      "behavioral": 0.5285
+    },
+    "description": "Anomalous NETWORK_TRANSFER detected for user_046. Flagged by: Autoencoder (reconstruction), LSTM (sequence). High model agreement (4/4 detectors triggered). Large data transfer: 49,241,908 bytes.",
+    "source_host": "host-08.internal",
+    "dest_ip": "190.144.20.195"
+  },
+  {
+    "alert_id": "NG-000111",
+    "timestamp": "2026-03-05T01:55:41",
+    "user_id": "user_027",
+    "event_type": "PROCESS_SPAWN",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7323,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1627,
+      "behavioral": 0.3316
+    },
+    "description": "Anomalous PROCESS_SPAWN detected for user_027. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-05.internal",
+    "dest_ip": "10.0.199.164"
+  },
+  {
+    "alert_id": "NG-000112",
+    "timestamp": "2026-03-05T02:12:36",
+    "user_id": "user_012",
+    "event_type": "CONFIG_CHANGE",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7318,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2336,
+      "behavioral": 0.2338
+    },
+    "description": "Anomalous CONFIG_CHANGE detected for user_012. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-13.internal",
+    "dest_ip": "10.0.71.161"
+  },
+  {
+    "alert_id": "NG-000113",
+    "timestamp": "2026-03-05T02:23:20",
+    "user_id": "user_017",
+    "event_type": "NETWORK_CONNECT",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7301,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1562,
+      "behavioral": 0.3256
+    },
+    "description": "Anomalous NETWORK_CONNECT detected for user_017. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-02.internal",
+    "dest_ip": "10.0.115.58"
+  },
+  {
+    "alert_id": "NG-000114",
+    "timestamp": "2026-03-05T02:38:20",
+    "user_id": "user_039",
+    "event_type": "FILE_DELETE",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7428,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1761,
+      "behavioral": 0.3839
+    },
+    "description": "Anomalous FILE_DELETE detected for user_039. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-09.internal",
+    "dest_ip": "10.0.219.211"
+  },
+  {
+    "alert_id": "NG-000115",
+    "timestamp": "2026-03-05T02:54:49",
+    "user_id": "user_020",
+    "event_type": "PROCESS_SPAWN",
+    "risk_level": "HIGH",
+    "ensemble_score": 0.6867,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.8784,
+      "isolation_forest": 0.1709,
+      "behavioral": 0.2601
+    },
+    "description": "Anomalous PROCESS_SPAWN detected for user_020. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-00.internal",
+    "dest_ip": "10.0.214.115"
+  },
+  {
+    "alert_id": "NG-000116",
+    "timestamp": "2026-03-05T03:20:11",
+    "user_id": "user_004",
+    "event_type": "FILE_MODIFY",
+    "risk_level": "HIGH",
+    "ensemble_score": 0.6756,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.8034,
+      "isolation_forest": 0.1771,
+      "behavioral": 0.3276
+    },
+    "description": "Anomalous FILE_MODIFY detected for user_004. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-04.internal",
+    "dest_ip": "10.0.47.236"
+  },
+  {
+    "alert_id": "NG-000117",
+    "timestamp": "2026-03-05T03:24:02",
+    "user_id": "user_019",
+    "event_type": "PROCESS_SPAWN",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7577,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.3552,
+      "behavioral": 0.2447
+    },
+    "description": "Anomalous PROCESS_SPAWN detected for user_019. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-10.internal",
+    "dest_ip": "10.0.22.178"
+  },
+  {
+    "alert_id": "NG-000118",
+    "timestamp": "2026-03-05T03:37:22",
+    "user_id": "user_014",
+    "event_type": "PROCESS_SPAWN",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7587,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2,
+      "behavioral": 0.458
+    },
+    "description": "Anomalous PROCESS_SPAWN detected for user_014. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-00.internal",
+    "dest_ip": "10.0.183.200"
+  },
+  {
+    "alert_id": "NG-000119",
+    "timestamp": "2026-03-05T03:49:33",
+    "user_id": "user_008",
+    "event_type": "PROCESS_SPAWN",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7467,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2266,
+      "behavioral": 0.3423
+    },
+    "description": "Anomalous PROCESS_SPAWN detected for user_008. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-04.internal",
+    "dest_ip": "10.0.128.95"
+  },
+  {
+    "alert_id": "NG-000120",
+    "timestamp": "2026-03-05T04:10:27",
+    "user_id": "user_048",
+    "event_type": "PRIVILEGE_ESCALATION",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7278,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1865,
+      "behavioral": 0.2699
+    },
+    "description": "Anomalous PRIVILEGE_ESCALATION detected for user_048. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-03.internal",
+    "dest_ip": "10.0.127.12"
+  },
+  {
+    "alert_id": "NG-000121",
+    "timestamp": "2026-03-05T04:52:49",
+    "user_id": "user_047",
+    "event_type": "DB_QUERY",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7767,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.3319,
+      "behavioral": 0.402
+    },
+    "description": "Anomalous DB_QUERY detected for user_047. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-03.internal",
+    "dest_ip": "10.0.187.194"
+  },
+  {
+    "alert_id": "NG-000122",
+    "timestamp": "2026-03-05T05:06:13",
+    "user_id": "user_026",
+    "event_type": "CONFIG_CHANGE",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.748,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2057,
+      "behavioral": 0.3791
+    },
+    "description": "Anomalous CONFIG_CHANGE detected for user_026. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-07.internal",
+    "dest_ip": "10.0.139.40"
+  },
+  {
+    "alert_id": "NG-000123",
+    "timestamp": "2026-03-05T05:15:53",
+    "user_id": "user_025",
+    "event_type": "FILE_DELETE",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7321,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1228,
+      "behavioral": 0.3836
+    },
+    "description": "Anomalous FILE_DELETE detected for user_025. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-09.internal",
+    "dest_ip": "10.0.199.164"
+  },
+  {
+    "alert_id": "NG-000124",
+    "timestamp": "2026-03-05T05:16:01",
+    "user_id": "user_038",
+    "event_type": "PRIVILEGE_ESCALATION",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7367,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.989,
+      "isolation_forest": 0.1322,
+      "behavioral": 0.4234
+    },
+    "description": "Anomalous PRIVILEGE_ESCALATION detected for user_038. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-06.internal",
+    "dest_ip": "10.0.173.198"
+  },
+  {
+    "alert_id": "NG-000125",
+    "timestamp": "2026-03-05T05:21:53",
+    "user_id": "user_000",
+    "event_type": "FILE_DELETE",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7418,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2402,
+      "behavioral": 0.2914
+    },
+    "description": "Anomalous FILE_DELETE detected for user_000. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-12.internal",
+    "dest_ip": "10.0.42.193"
+  },
+  {
+    "alert_id": "NG-000126",
+    "timestamp": "2026-03-05T05:32:42",
+    "user_id": "user_023",
+    "event_type": "USB_INSERT",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7341,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.181,
+      "behavioral": 0.3191
+    },
+    "description": "Anomalous USB_INSERT detected for user_023. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-12.internal",
+    "dest_ip": "10.0.103.209"
+  },
+  {
+    "alert_id": "NG-000127",
+    "timestamp": "2026-03-05T05:49:40",
+    "user_id": "user_002",
+    "event_type": "PROCESS_SPAWN",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7207,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1159,
+      "behavioral": 0.3166
+    },
+    "description": "Anomalous PROCESS_SPAWN detected for user_002. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-07.internal",
+    "dest_ip": "10.0.23.197"
+  },
+  {
+    "alert_id": "NG-000128",
+    "timestamp": "2026-03-05T05:54:23",
+    "user_id": "user_037",
+    "event_type": "USB_INSERT",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7513,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2438,
+      "behavioral": 0.3503
+    },
+    "description": "Anomalous USB_INSERT detected for user_037. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-04.internal",
+    "dest_ip": "10.0.131.33"
+  },
+  {
+    "alert_id": "NG-000129",
+    "timestamp": "2026-03-05T06:15:40",
+    "user_id": "user_029",
+    "event_type": "NETWORK_TRANSFER",
+    "risk_level": "SEVERE",
+    "ensemble_score": 0.9313,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.5401,
+      "behavioral": 0.4886
+    },
+    "description": "Anomalous NETWORK_TRANSFER detected for user_029. Flagged by: Autoencoder (reconstruction), LSTM (sequence). High model agreement (3/4 detectors triggered). Large data transfer: 7,543,034 bytes.",
+    "source_host": "host-01.internal",
+    "dest_ip": "74.57.143.171"
+  },
+  {
+    "alert_id": "NG-000130",
+    "timestamp": "2026-03-05T06:26:23",
+    "user_id": "user_001",
+    "event_type": "NETWORK_CONNECT",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7139,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1613,
+      "behavioral": 0.2109
+    },
+    "description": "Anomalous NETWORK_CONNECT detected for user_001. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-03.internal",
+    "dest_ip": "10.0.214.115"
+  },
+  {
+    "alert_id": "NG-000131",
+    "timestamp": "2026-03-05T06:38:10",
+    "user_id": "user_018",
+    "event_type": "NETWORK_TRANSFER",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7169,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1494,
+      "behavioral": 0.2466
+    },
+    "description": "Anomalous NETWORK_TRANSFER detected for user_018. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-01.internal",
+    "dest_ip": "10.0.42.193"
+  },
+  {
+    "alert_id": "NG-000132",
+    "timestamp": "2026-03-05T06:40:07",
+    "user_id": "user_021",
+    "event_type": "PRIVILEGE_ESCALATION",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7281,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1987,
+      "behavioral": 0.2555
+    },
+    "description": "Anomalous PRIVILEGE_ESCALATION detected for user_021. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-13.internal",
+    "dest_ip": "10.0.115.58"
+  },
+  {
+    "alert_id": "NG-000133",
+    "timestamp": "2026-03-05T07:20:26",
+    "user_id": "user_049",
+    "event_type": "REGISTRY_MODIFY",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7054,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.12,
+      "behavioral": 0.2097
+    },
+    "description": "Anomalous REGISTRY_MODIFY detected for user_049. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-09.internal",
+    "dest_ip": "10.0.167.112"
+  },
+  {
+    "alert_id": "NG-000134",
+    "timestamp": "2026-03-05T07:37:33",
+    "user_id": "user_041",
+    "event_type": "LOGOUT",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7199,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2549,
+      "behavioral": 0.1262
+    },
+    "description": "Anomalous LOGOUT detected for user_041. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-07.internal",
+    "dest_ip": "10.0.127.12"
+  },
+  {
+    "alert_id": "NG-000135",
+    "timestamp": "2026-03-05T07:47:56",
+    "user_id": "user_044",
+    "event_type": "CONFIG_CHANGE",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7096,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2904,
+      "behavioral": 0.0104
+    },
+    "description": "Anomalous CONFIG_CHANGE detected for user_044. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-06.internal",
+    "dest_ip": "10.0.93.119"
+  },
+  {
+    "alert_id": "NG-000136",
+    "timestamp": "2026-03-05T07:56:36",
+    "user_id": "user_007",
+    "event_type": "FILE_ACCESS",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7418,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2047,
+      "behavioral": 0.3391
+    },
+    "description": "Anomalous FILE_ACCESS detected for user_007. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-11.internal",
+    "dest_ip": "10.0.42.193"
+  },
+  {
+    "alert_id": "NG-000137",
+    "timestamp": "2026-03-05T08:11:21",
+    "user_id": "user_009",
+    "event_type": "CONFIG_CHANGE",
+    "risk_level": "HIGH",
+    "ensemble_score": 0.6662,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.9167,
+      "isolation_forest": 0.1351,
+      "behavioral": 0.0947
+    },
+    "description": "Anomalous CONFIG_CHANGE detected for user_009. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-13.internal",
+    "dest_ip": "10.0.167.112"
+  },
+  {
+    "alert_id": "NG-000138",
+    "timestamp": "2026-03-05T08:34:14",
+    "user_id": "user_045",
+    "event_type": "FILE_DELETE",
+    "risk_level": "HIGH",
+    "ensemble_score": 0.6778,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.7997,
+      "isolation_forest": 0.2932,
+      "behavioral": 0.1949
+    },
+    "description": "Anomalous FILE_DELETE detected for user_045. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-02.internal",
+    "dest_ip": "10.0.22.178"
+  },
+  {
+    "alert_id": "NG-000139",
+    "timestamp": "2026-03-05T08:57:21",
+    "user_id": "user_015",
+    "event_type": "FILE_ACCESS",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7015,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1859,
+      "behavioral": 0.0952
+    },
+    "description": "Anomalous FILE_ACCESS detected for user_015. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-14.internal",
+    "dest_ip": "10.0.71.161"
+  },
+  {
+    "alert_id": "NG-000140",
+    "timestamp": "2026-03-05T09:55:07",
+    "user_id": "user_005",
+    "event_type": "REGISTRY_MODIFY",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7428,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.3008,
+      "behavioral": 0.2179
+    },
+    "description": "Anomalous REGISTRY_MODIFY detected for user_005. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-08.internal",
+    "dest_ip": "10.0.131.33"
+  },
+  {
+    "alert_id": "NG-000141",
+    "timestamp": "2026-03-05T11:15:00",
+    "user_id": "user_011",
+    "event_type": "FILE_DELETE",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.74,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.3662,
+      "behavioral": 0.112
+    },
+    "description": "Anomalous FILE_DELETE detected for user_011. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-00.internal",
+    "dest_ip": "10.0.214.115"
+  },
+  {
+    "alert_id": "NG-000142",
+    "timestamp": "2026-03-05T11:26:28",
+    "user_id": "user_022",
+    "event_type": "NETWORK_CONNECT",
+    "risk_level": "HIGH",
+    "ensemble_score": 0.6965,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2221,
+      "behavioral": 0.0138
+    },
+    "description": "Anomalous NETWORK_CONNECT detected for user_022. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-04.internal",
+    "dest_ip": "10.0.22.178"
+  },
+  {
+    "alert_id": "NG-000143",
+    "timestamp": "2026-03-05T22:03:08",
+    "user_id": "user_028",
+    "event_type": "FILE_DELETE",
+    "risk_level": "HIGH",
+    "ensemble_score": 0.6771,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.7757,
+      "isolation_forest": 0.2776,
+      "behavioral": 0.2595
+    },
+    "description": "Anomalous FILE_DELETE detected for user_028. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-09.internal",
+    "dest_ip": "10.0.226.17"
+  },
+  {
+    "alert_id": "NG-000144",
+    "timestamp": "2026-03-05T22:13:15",
+    "user_id": "user_044",
+    "event_type": "NETWORK_TRANSFER",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.8304,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.4284,
+      "isolation_forest": 0.8333,
+      "behavioral": 0.568
+    },
+    "description": "Anomalous NETWORK_TRANSFER detected for user_044. Flagged by: Autoencoder (reconstruction), Isolation Forest (statistical). High model agreement (3/4 detectors triggered). Large data transfer: 46,283,322 bytes.",
+    "source_host": "host-00.internal",
+    "dest_ip": "177.200.198.169"
+  },
+  {
+    "alert_id": "NG-000145",
+    "timestamp": "2026-03-05T22:38:41",
+    "user_id": "user_001",
+    "event_type": "LOGIN",
+    "risk_level": "HIGH",
+    "ensemble_score": 0.6557,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.7519,
+      "isolation_forest": 0.2679,
+      "behavioral": 0.177
+    },
+    "description": "Anomalous LOGIN detected for user_001. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-09.internal",
+    "dest_ip": "10.0.127.12"
+  },
+  {
+    "alert_id": "NG-000146",
+    "timestamp": "2026-03-05T22:55:36",
+    "user_id": "user_038",
+    "event_type": "FILE_ACCESS",
+    "risk_level": "HIGH",
+    "ensemble_score": 0.6705,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.7648,
+      "isolation_forest": 0.2057,
+      "behavioral": 0.3329
+    },
+    "description": "Anomalous FILE_ACCESS detected for user_038. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-13.internal",
+    "dest_ip": "10.0.183.200"
+  },
+  {
+    "alert_id": "NG-000147",
+    "timestamp": "2026-03-06T00:36:47",
+    "user_id": "user_006",
+    "event_type": "FILE_DELETE",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7713,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.3031,
+      "behavioral": 0.4045
+    },
+    "description": "Anomalous FILE_DELETE detected for user_006. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-09.internal",
+    "dest_ip": "10.0.23.197"
+  },
+  {
+    "alert_id": "NG-000148",
+    "timestamp": "2026-03-06T01:02:52",
+    "user_id": "user_039",
+    "event_type": "PROCESS_SPAWN",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7357,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2238,
+      "behavioral": 0.2732
+    },
+    "description": "Anomalous PROCESS_SPAWN detected for user_039. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-12.internal",
+    "dest_ip": "10.0.71.161"
+  },
+  {
+    "alert_id": "NG-000149",
+    "timestamp": "2026-03-06T02:42:25",
+    "user_id": "user_022",
+    "event_type": "FILE_ACCESS",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.792,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.4126,
+      "behavioral": 0.3968
+    },
+    "description": "Anomalous FILE_ACCESS detected for user_022. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-14.internal",
+    "dest_ip": "10.0.173.198"
+  },
+  {
+    "alert_id": "NG-000150",
+    "timestamp": "2026-03-06T02:42:56",
+    "user_id": "user_043",
+    "event_type": "DB_QUERY",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7606,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.9382,
+      "isolation_forest": 0.2961,
+      "behavioral": 0.4663
+    },
+    "description": "Anomalous DB_QUERY detected for user_043. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-05.internal",
+    "dest_ip": "10.0.134.248"
+  },
+  {
+    "alert_id": "NG-000151",
+    "timestamp": "2026-03-06T03:04:11",
+    "user_id": "user_045",
+    "event_type": "CONFIG_CHANGE",
+    "risk_level": "HIGH",
+    "ensemble_score": 0.6638,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.7798,
+      "isolation_forest": 0.272,
+      "behavioral": 0.1699
+    },
+    "description": "Anomalous CONFIG_CHANGE detected for user_045. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-10.internal",
+    "dest_ip": "10.0.131.33"
+  },
+  {
+    "alert_id": "NG-000152",
+    "timestamp": "2026-03-06T03:04:21",
+    "user_id": "user_032",
+    "event_type": "PRIVILEGE_ESCALATION",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7393,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2673,
+      "behavioral": 0.2387
+    },
+    "description": "Anomalous PRIVILEGE_ESCALATION detected for user_032. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-02.internal",
+    "dest_ip": "10.0.189.174"
+  },
+  {
+    "alert_id": "NG-000153",
+    "timestamp": "2026-03-06T03:22:54",
+    "user_id": "user_016",
+    "event_type": "PROCESS_SPAWN",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7034,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1072,
+      "behavioral": 0.2133
+    },
+    "description": "Anomalous PROCESS_SPAWN detected for user_016. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-08.internal",
+    "dest_ip": "10.0.131.33"
+  },
+  {
+    "alert_id": "NG-000154",
+    "timestamp": "2026-03-06T03:35:09",
+    "user_id": "user_023",
+    "event_type": "PRIVILEGE_ESCALATION",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7281,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2009,
+      "behavioral": 0.2527
+    },
+    "description": "Anomalous PRIVILEGE_ESCALATION detected for user_023. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-09.internal",
+    "dest_ip": "10.0.42.193"
+  },
+  {
+    "alert_id": "NG-000155",
+    "timestamp": "2026-03-06T03:48:50",
+    "user_id": "user_049",
+    "event_type": "NETWORK_TRANSFER",
+    "risk_level": "HIGH",
+    "ensemble_score": 0.6761,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.4999,
+      "isolation_forest": 0.6205,
+      "behavioral": 0.3467
+    },
+    "description": "Anomalous NETWORK_TRANSFER detected for user_049. Flagged by: Autoencoder (reconstruction), Isolation Forest (statistical). Large data transfer: 6,952,699 bytes.",
+    "source_host": "host-03.internal",
+    "dest_ip": "209.111.40.212"
+  },
+  {
+    "alert_id": "NG-000156",
+    "timestamp": "2026-03-06T04:03:22",
+    "user_id": "user_047",
+    "event_type": "LOGIN",
+    "risk_level": "HIGH",
+    "ensemble_score": 0.6548,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.7697,
+      "isolation_forest": 0.1614,
+      "behavioral": 0.2774
+    },
+    "description": "Anomalous LOGIN detected for user_047. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-05.internal",
+    "dest_ip": "10.0.22.178"
+  },
+  {
+    "alert_id": "NG-000157",
+    "timestamp": "2026-03-06T04:21:24",
+    "user_id": "user_035",
+    "event_type": "LOGOUT",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7414,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1843,
+      "behavioral": 0.3633
+    },
+    "description": "Anomalous LOGOUT detected for user_035. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-11.internal",
+    "dest_ip": "10.0.134.248"
+  },
+  {
+    "alert_id": "NG-000158",
+    "timestamp": "2026-03-06T04:44:20",
+    "user_id": "user_005",
+    "event_type": "FILE_DELETE",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7186,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1428,
+      "behavioral": 0.2673
+    },
+    "description": "Anomalous FILE_DELETE detected for user_005. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-07.internal",
+    "dest_ip": "10.0.22.178"
+  },
+  {
+    "alert_id": "NG-000159",
+    "timestamp": "2026-03-06T04:44:27",
+    "user_id": "user_031",
+    "event_type": "PROCESS_SPAWN",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7106,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1421,
+      "behavioral": 0.2142
+    },
+    "description": "Anomalous PROCESS_SPAWN detected for user_031. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-00.internal",
+    "dest_ip": "10.0.42.193"
+  },
+  {
+    "alert_id": "NG-000160",
+    "timestamp": "2026-03-06T04:55:24",
+    "user_id": "user_017",
+    "event_type": "REGISTRY_MODIFY",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7409,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1772,
+      "behavioral": 0.3695
+    },
+    "description": "Anomalous REGISTRY_MODIFY detected for user_017. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-07.internal",
+    "dest_ip": "10.0.183.200"
+  },
+  {
+    "alert_id": "NG-000161",
+    "timestamp": "2026-03-06T05:24:55",
+    "user_id": "user_034",
+    "event_type": "LOGOUT",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7232,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1186,
+      "behavioral": 0.3297
+    },
+    "description": "Anomalous LOGOUT detected for user_034. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-12.internal",
+    "dest_ip": "10.0.194.50"
+  },
+  {
+    "alert_id": "NG-000162",
+    "timestamp": "2026-03-06T05:52:57",
+    "user_id": "user_048",
+    "event_type": "CONFIG_CHANGE",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7423,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1914,
+      "behavioral": 0.3599
+    },
+    "description": "Anomalous CONFIG_CHANGE detected for user_048. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-14.internal",
+    "dest_ip": "10.0.187.194"
+  },
+  {
+    "alert_id": "NG-000163",
+    "timestamp": "2026-03-06T06:00:38",
+    "user_id": "user_009",
+    "event_type": "USB_INSERT",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7103,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1763,
+      "behavioral": 0.167
+    },
+    "description": "Anomalous USB_INSERT detected for user_009. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-11.internal",
+    "dest_ip": "10.0.22.178"
+  },
+  {
+    "alert_id": "NG-000164",
+    "timestamp": "2026-03-06T06:12:13",
+    "user_id": "user_012",
+    "event_type": "CONFIG_CHANGE",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7001,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1712,
+      "behavioral": 0.1055
+    },
+    "description": "Anomalous CONFIG_CHANGE detected for user_012. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-00.internal",
+    "dest_ip": "10.0.127.12"
+  },
+  {
+    "alert_id": "NG-000165",
+    "timestamp": "2026-03-06T06:14:56",
+    "user_id": "user_038",
+    "event_type": "NETWORK_TRANSFER",
+    "risk_level": "HIGH",
+    "ensemble_score": 0.6576,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.7855,
+      "isolation_forest": 0.1254,
+      "behavioral": 0.3127
+    },
+    "description": "Anomalous NETWORK_TRANSFER detected for user_038. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-13.internal",
+    "dest_ip": "10.0.187.194"
+  },
+  {
+    "alert_id": "NG-000166",
+    "timestamp": "2026-03-06T06:29:42",
+    "user_id": "user_024",
+    "event_type": "REGISTRY_MODIFY",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7115,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1122,
+      "behavioral": 0.2605
+    },
+    "description": "Anomalous REGISTRY_MODIFY detected for user_024. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-01.internal",
+    "dest_ip": "10.0.214.115"
+  },
+  {
+    "alert_id": "NG-000167",
+    "timestamp": "2026-03-06T06:37:07",
+    "user_id": "user_011",
+    "event_type": "PROCESS_SPAWN",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7152,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1895,
+      "behavioral": 0.1822
+    },
+    "description": "Anomalous PROCESS_SPAWN detected for user_011. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-01.internal",
+    "dest_ip": "10.0.22.178"
+  },
+  {
+    "alert_id": "NG-000168",
+    "timestamp": "2026-03-06T06:48:46",
+    "user_id": "user_004",
+    "event_type": "PROCESS_SPAWN",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7244,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1304,
+      "behavioral": 0.3221
+    },
+    "description": "Anomalous PROCESS_SPAWN detected for user_004. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-05.internal",
+    "dest_ip": "10.0.178.91"
+  },
+  {
+    "alert_id": "NG-000169",
+    "timestamp": "2026-03-06T06:54:49",
+    "user_id": "user_021",
+    "event_type": "FILE_ACCESS",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7181,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.9077,
+      "isolation_forest": 0.1899,
+      "behavioral": 0.3854
+    },
+    "description": "Anomalous FILE_ACCESS detected for user_021. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-06.internal",
+    "dest_ip": "10.0.226.17"
+  },
+  {
+    "alert_id": "NG-000170",
+    "timestamp": "2026-03-06T07:00:23",
+    "user_id": "user_027",
+    "event_type": "FILE_ACCESS",
+    "risk_level": "HIGH",
+    "ensemble_score": 0.6961,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.09,
+      "behavioral": 0.1875
+    },
+    "description": "Anomalous FILE_ACCESS detected for user_027. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-05.internal",
+    "dest_ip": "10.0.114.227"
+  },
+  {
+    "alert_id": "NG-000171",
+    "timestamp": "2026-03-06T07:12:24",
+    "user_id": "user_008",
+    "event_type": "PRIVILEGE_ESCALATION",
+    "risk_level": "HIGH",
+    "ensemble_score": 0.6826,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.8581,
+      "isolation_forest": 0.2157,
+      "behavioral": 0.2137
+    },
+    "description": "Anomalous PRIVILEGE_ESCALATION detected for user_008. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-08.internal",
+    "dest_ip": "10.0.178.91"
+  },
+  {
+    "alert_id": "NG-000172",
+    "timestamp": "2026-03-06T07:38:42",
+    "user_id": "user_029",
+    "event_type": "NETWORK_CONNECT",
+    "risk_level": "HIGH",
+    "ensemble_score": 0.6951,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1242,
+      "behavioral": 0.135
+    },
+    "description": "Anomalous NETWORK_CONNECT detected for user_029. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-09.internal",
+    "dest_ip": "10.0.47.236"
+  },
+  {
+    "alert_id": "NG-000173",
+    "timestamp": "2026-03-06T07:51:22",
+    "user_id": "user_014",
+    "event_type": "CONFIG_CHANGE",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7193,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1543,
+      "behavioral": 0.2561
+    },
+    "description": "Anomalous CONFIG_CHANGE detected for user_014. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-03.internal",
+    "dest_ip": "10.0.167.112"
+  },
+  {
+    "alert_id": "NG-000174",
+    "timestamp": "2026-03-06T08:24:20",
+    "user_id": "user_003",
+    "event_type": "PRIVILEGE_ESCALATION",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7179,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1611,
+      "behavioral": 0.2375
+    },
+    "description": "Anomalous PRIVILEGE_ESCALATION detected for user_003. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-10.internal",
+    "dest_ip": "10.0.18.247"
+  },
+  {
+    "alert_id": "NG-000175",
+    "timestamp": "2026-03-06T08:24:47",
+    "user_id": "user_046",
+    "event_type": "USB_INSERT",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7134,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.201,
+      "behavioral": 0.1544
+    },
+    "description": "Anomalous USB_INSERT detected for user_046. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-02.internal",
+    "dest_ip": "10.0.194.50"
+  },
+  {
+    "alert_id": "NG-000176",
+    "timestamp": "2026-03-06T08:38:50",
+    "user_id": "user_044",
+    "event_type": "LOGOUT",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7765,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.4644,
+      "behavioral": 0.2243
+    },
+    "description": "Anomalous LOGOUT detected for user_044. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-07.internal",
+    "dest_ip": "10.0.173.198"
+  },
+  {
+    "alert_id": "NG-000177",
+    "timestamp": "2026-03-06T08:42:02",
+    "user_id": "user_015",
+    "event_type": "USB_INSERT",
+    "risk_level": "HIGH",
+    "ensemble_score": 0.6902,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1147,
+      "behavioral": 0.1152
+    },
+    "description": "Anomalous USB_INSERT detected for user_015. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-10.internal",
+    "dest_ip": "10.0.199.164"
+  },
+  {
+    "alert_id": "NG-000178",
+    "timestamp": "2026-03-06T08:53:53",
+    "user_id": "user_025",
+    "event_type": "FILE_MODIFY",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7256,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2086,
+      "behavioral": 0.2259
+    },
+    "description": "Anomalous FILE_MODIFY detected for user_025. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-06.internal",
+    "dest_ip": "10.0.114.227"
+  },
+  {
+    "alert_id": "NG-000179",
+    "timestamp": "2026-03-06T09:07:06",
+    "user_id": "user_037",
+    "event_type": "FILE_ACCESS",
+    "risk_level": "HIGH",
+    "ensemble_score": 0.6934,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1527,
+      "behavioral": 0.0855
+    },
+    "description": "Anomalous FILE_ACCESS detected for user_037. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-05.internal",
+    "dest_ip": "10.0.128.95"
+  },
+  {
+    "alert_id": "NG-000180",
+    "timestamp": "2026-03-06T09:11:56",
+    "user_id": "user_040",
+    "event_type": "NETWORK_TRANSFER",
+    "risk_level": "HIGH",
+    "ensemble_score": 0.6714,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1037,
+      "behavioral": 0.0046
+    },
+    "description": "Anomalous NETWORK_TRANSFER detected for user_040. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-13.internal",
+    "dest_ip": "10.0.114.227"
+  },
+  {
+    "alert_id": "NG-000181",
+    "timestamp": "2026-03-06T22:52:36",
+    "user_id": "user_033",
+    "event_type": "NETWORK_TRANSFER",
+    "risk_level": "SEVERE",
+    "ensemble_score": 1.0,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.7832,
+      "isolation_forest": 0.6884,
+      "behavioral": 0.565
+    },
+    "description": "Anomalous NETWORK_TRANSFER detected for user_033. Flagged by: Autoencoder (reconstruction), LSTM (sequence). High model agreement (4/4 detectors triggered). Large data transfer: 18,002,700 bytes.",
+    "source_host": "host-12.internal",
+    "dest_ip": "105.179.70.199"
+  },
+  {
+    "alert_id": "NG-000182",
+    "timestamp": "2026-03-06T23:39:01",
+    "user_id": "user_025",
+    "event_type": "NETWORK_CONNECT",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7422,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2185,
+      "behavioral": 0.3234
+    },
+    "description": "Anomalous NETWORK_CONNECT detected for user_025. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-06.internal",
+    "dest_ip": "10.0.47.236"
+  },
+  {
+    "alert_id": "NG-000183",
+    "timestamp": "2026-03-07T00:31:49",
+    "user_id": "user_010",
+    "event_type": "FILE_DELETE",
+    "risk_level": "HIGH",
+    "ensemble_score": 0.6718,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.7963,
+      "isolation_forest": 0.198,
+      "behavioral": 0.2888
+    },
+    "description": "Anomalous FILE_DELETE detected for user_010. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-05.internal",
+    "dest_ip": "10.0.187.194"
+  },
+  {
+    "alert_id": "NG-000184",
+    "timestamp": "2026-03-07T00:45:25",
+    "user_id": "user_003",
+    "event_type": "DB_QUERY",
+    "risk_level": "HIGH",
+    "ensemble_score": 0.6655,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.6234,
+      "isolation_forest": 0.3653,
+      "behavioral": 0.3696
+    },
+    "description": "Anomalous DB_QUERY detected for user_003. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-13.internal",
+    "dest_ip": "10.0.22.178"
+  },
+  {
+    "alert_id": "NG-000185",
+    "timestamp": "2026-03-07T01:30:25",
+    "user_id": "user_023",
+    "event_type": "NETWORK_CONNECT",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7503,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2358,
+      "behavioral": 0.3545
+    },
+    "description": "Anomalous NETWORK_CONNECT detected for user_023. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-05.internal",
+    "dest_ip": "10.0.103.209"
+  },
+  {
+    "alert_id": "NG-000186",
+    "timestamp": "2026-03-07T01:52:14",
+    "user_id": "user_040",
+    "event_type": "NETWORK_TRANSFER",
+    "risk_level": "SEVERE",
+    "ensemble_score": 1.0,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.6773,
+      "behavioral": 0.5888
+    },
+    "description": "Anomalous NETWORK_TRANSFER detected for user_040. Flagged by: Autoencoder (reconstruction), LSTM (sequence). High model agreement (4/4 detectors triggered). Large data transfer: 14,951,842 bytes.",
+    "source_host": "host-04.internal",
+    "dest_ip": "209.111.40.212"
+  },
+  {
+    "alert_id": "NG-000187",
+    "timestamp": "2026-03-07T01:54:52",
+    "user_id": "user_026",
+    "event_type": "NETWORK_CONNECT",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7093,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.8583,
+      "isolation_forest": 0.2982,
+      "behavioral": 0.2812
+    },
+    "description": "Anomalous NETWORK_CONNECT detected for user_026. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-00.internal",
+    "dest_ip": "10.0.128.95"
+  },
+  {
+    "alert_id": "NG-000188",
+    "timestamp": "2026-03-07T02:07:19",
+    "user_id": "user_008",
+    "event_type": "FILE_MODIFY",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7547,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2421,
+      "behavioral": 0.375
+    },
+    "description": "Anomalous FILE_MODIFY detected for user_008. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-12.internal",
+    "dest_ip": "10.0.131.33"
+  },
+  {
+    "alert_id": "NG-000189",
+    "timestamp": "2026-03-07T02:31:04",
+    "user_id": "user_047",
+    "event_type": "FILE_DELETE",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7354,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.9939,
+      "isolation_forest": 0.1947,
+      "behavioral": 0.3222
+    },
+    "description": "Anomalous FILE_DELETE detected for user_047. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-14.internal",
+    "dest_ip": "10.0.189.174"
+  },
+  {
+    "alert_id": "NG-000190",
+    "timestamp": "2026-03-07T03:15:09",
+    "user_id": "user_043",
+    "event_type": "REGISTRY_MODIFY",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7645,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2888,
+      "behavioral": 0.3783
+    },
+    "description": "Anomalous REGISTRY_MODIFY detected for user_043. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-05.internal",
+    "dest_ip": "10.0.24.141"
+  },
+  {
+    "alert_id": "NG-000191",
+    "timestamp": "2026-03-07T03:16:58",
+    "user_id": "user_007",
+    "event_type": "REGISTRY_MODIFY",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.753,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.232,
+      "behavioral": 0.3772
+    },
+    "description": "Anomalous REGISTRY_MODIFY detected for user_007. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-13.internal",
+    "dest_ip": "10.0.187.194"
+  },
+  {
+    "alert_id": "NG-000192",
+    "timestamp": "2026-03-07T03:48:11",
+    "user_id": "user_044",
+    "event_type": "FILE_ACCESS",
+    "risk_level": "HIGH",
+    "ensemble_score": 0.6846,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.624,
+      "isolation_forest": 0.4748,
+      "behavioral": 0.3493
+    },
+    "description": "Anomalous FILE_ACCESS detected for user_044. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-03.internal",
+    "dest_ip": "10.0.131.33"
+  },
+  {
+    "alert_id": "NG-000193",
+    "timestamp": "2026-03-07T04:03:05",
+    "user_id": "user_002",
+    "event_type": "PRIVILEGE_ESCALATION",
+    "risk_level": "HIGH",
+    "ensemble_score": 0.695,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.8044,
+      "isolation_forest": 0.3453,
+      "behavioral": 0.2309
+    },
+    "description": "Anomalous PRIVILEGE_ESCALATION detected for user_002. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-13.internal",
+    "dest_ip": "10.0.178.91"
+  },
+  {
+    "alert_id": "NG-000194",
+    "timestamp": "2026-03-07T04:19:49",
+    "user_id": "user_036",
+    "event_type": "NETWORK_TRANSFER",
+    "risk_level": "SEVERE",
+    "ensemble_score": 1.0,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.7138,
+      "behavioral": 0.589
+    },
+    "description": "Anomalous NETWORK_TRANSFER detected for user_036. Flagged by: Autoencoder (reconstruction), LSTM (sequence). High model agreement (4/4 detectors triggered). Large data transfer: 15,401,212 bytes.",
+    "source_host": "host-08.internal",
+    "dest_ip": "124.117.128.145"
+  },
+  {
+    "alert_id": "NG-000195",
+    "timestamp": "2026-03-07T04:21:17",
+    "user_id": "user_041",
+    "event_type": "DB_QUERY",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.769,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.3116,
+      "behavioral": 0.3778
+    },
+    "description": "Anomalous DB_QUERY detected for user_041. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-05.internal",
+    "dest_ip": "10.0.93.119"
+  },
+  {
+    "alert_id": "NG-000196",
+    "timestamp": "2026-03-07T04:21:54",
+    "user_id": "user_005",
+    "event_type": "FILE_ACCESS",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7726,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.4043,
+      "behavioral": 0.2783
+    },
+    "description": "Anomalous FILE_ACCESS detected for user_005. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-02.internal",
+    "dest_ip": "10.0.178.91"
+  },
+  {
+    "alert_id": "NG-000197",
+    "timestamp": "2026-03-07T04:29:24",
+    "user_id": "user_020",
+    "event_type": "PRIVILEGE_ESCALATION",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.798,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.4158,
+      "behavioral": 0.4324
+    },
+    "description": "Anomalous PRIVILEGE_ESCALATION detected for user_020. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-03.internal",
+    "dest_ip": "10.0.23.197"
+  },
+  {
+    "alert_id": "NG-000198",
+    "timestamp": "2026-03-07T05:04:51",
+    "user_id": "user_019",
+    "event_type": "PROCESS_SPAWN",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7367,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2302,
+      "behavioral": 0.2711
+    },
+    "description": "Anomalous PROCESS_SPAWN detected for user_019. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-00.internal",
+    "dest_ip": "10.0.110.219"
+  },
+  {
+    "alert_id": "NG-000199",
+    "timestamp": "2026-03-07T05:07:20",
+    "user_id": "user_017",
+    "event_type": "LOGOUT",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7169,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1452,
+      "behavioral": 0.2523
+    },
+    "description": "Anomalous LOGOUT detected for user_017. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-07.internal",
+    "dest_ip": "10.0.139.113"
+  },
+  {
+    "alert_id": "NG-000200",
+    "timestamp": "2026-03-07T05:19:48",
+    "user_id": "user_018",
+    "event_type": "FILE_ACCESS",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7513,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2874,
+      "behavioral": 0.2921
+    },
+    "description": "Anomalous FILE_ACCESS detected for user_018. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-13.internal",
+    "dest_ip": "10.0.52.24"
+  },
+  {
+    "alert_id": "NG-000201",
+    "timestamp": "2026-03-07T05:37:07",
+    "user_id": "user_004",
+    "event_type": "CONFIG_CHANGE",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7272,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2248,
+      "behavioral": 0.2146
+    },
+    "description": "Anomalous CONFIG_CHANGE detected for user_004. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-06.internal",
+    "dest_ip": "10.0.219.211"
+  },
+  {
+    "alert_id": "NG-000202",
+    "timestamp": "2026-03-07T06:05:25",
+    "user_id": "user_039",
+    "event_type": "NETWORK_CONNECT",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.722,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1275,
+      "behavioral": 0.3099
+    },
+    "description": "Anomalous NETWORK_CONNECT detected for user_039. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-07.internal",
+    "dest_ip": "10.0.183.200"
+  },
+  {
+    "alert_id": "NG-000203",
+    "timestamp": "2026-03-07T06:12:21",
+    "user_id": "user_000",
+    "event_type": "LOGIN",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7432,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.3108,
+      "behavioral": 0.2069
+    },
+    "description": "Anomalous LOGIN detected for user_000. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-13.internal",
+    "dest_ip": "10.0.189.174"
+  },
+  {
+    "alert_id": "NG-000204",
+    "timestamp": "2026-03-07T06:20:06",
+    "user_id": "user_048",
+    "event_type": "USB_INSERT",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7467,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1965,
+      "behavioral": 0.3828
+    },
+    "description": "Anomalous USB_INSERT detected for user_048. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-14.internal",
+    "dest_ip": "10.0.183.200"
+  },
+  {
+    "alert_id": "NG-000205",
+    "timestamp": "2026-03-07T06:34:45",
+    "user_id": "user_049",
+    "event_type": "LOGOUT",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.751,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.3034,
+      "behavioral": 0.2687
+    },
+    "description": "Anomalous LOGOUT detected for user_049. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-11.internal",
+    "dest_ip": "10.0.131.33"
+  },
+  {
+    "alert_id": "NG-000206",
+    "timestamp": "2026-03-07T06:58:37",
+    "user_id": "user_030",
+    "event_type": "FILE_DELETE",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7288,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1508,
+      "behavioral": 0.3241
+    },
+    "description": "Anomalous FILE_DELETE detected for user_030. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-04.internal",
+    "dest_ip": "10.0.128.95"
+  },
+  {
+    "alert_id": "NG-000207",
+    "timestamp": "2026-03-07T07:01:53",
+    "user_id": "user_001",
+    "event_type": "LOGIN",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7278,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2189,
+      "behavioral": 0.227
+    },
+    "description": "Anomalous LOGIN detected for user_001. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-04.internal",
+    "dest_ip": "10.0.187.194"
+  },
+  {
+    "alert_id": "NG-000208",
+    "timestamp": "2026-03-07T07:24:43",
+    "user_id": "user_006",
+    "event_type": "REGISTRY_MODIFY",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7088,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1905,
+      "behavioral": 0.1383
+    },
+    "description": "Anomalous REGISTRY_MODIFY detected for user_006. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-01.internal",
+    "dest_ip": "10.0.22.178"
+  },
+  {
+    "alert_id": "NG-000209",
+    "timestamp": "2026-03-07T07:37:18",
+    "user_id": "user_009",
+    "event_type": "NETWORK_CONNECT",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7459,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2373,
+      "behavioral": 0.3231
+    },
+    "description": "Anomalous NETWORK_CONNECT detected for user_009. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-11.internal",
+    "dest_ip": "10.0.23.197"
+  },
+  {
+    "alert_id": "NG-000210",
+    "timestamp": "2026-03-07T07:41:56",
+    "user_id": "user_038",
+    "event_type": "REGISTRY_MODIFY",
+    "risk_level": "HIGH",
+    "ensemble_score": 0.698,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1575,
+      "behavioral": 0.1097
+    },
+    "description": "Anomalous REGISTRY_MODIFY detected for user_038. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-06.internal",
+    "dest_ip": "10.0.52.24"
+  },
+  {
+    "alert_id": "NG-000211",
+    "timestamp": "2026-03-07T07:45:58",
+    "user_id": "user_011",
+    "event_type": "NETWORK_CONNECT",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7396,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.37,
+      "behavioral": 0.104
+    },
+    "description": "Anomalous NETWORK_CONNECT detected for user_011. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-01.internal",
+    "dest_ip": "10.0.178.91"
+  },
+  {
+    "alert_id": "NG-000212",
+    "timestamp": "2026-03-07T08:11:21",
+    "user_id": "user_013",
+    "event_type": "CONFIG_CHANGE",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7197,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2132,
+      "behavioral": 0.1806
+    },
+    "description": "Anomalous CONFIG_CHANGE detected for user_013. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-14.internal",
+    "dest_ip": "10.0.226.17"
+  },
+  {
+    "alert_id": "NG-000213",
+    "timestamp": "2026-03-07T08:11:26",
+    "user_id": "user_015",
+    "event_type": "REGISTRY_MODIFY",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7028,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1775,
+      "behavioral": 0.1152
+    },
+    "description": "Anomalous REGISTRY_MODIFY detected for user_015. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-04.internal",
+    "dest_ip": "10.0.219.211"
+  },
+  {
+    "alert_id": "NG-000214",
+    "timestamp": "2026-03-07T08:13:49",
+    "user_id": "user_016",
+    "event_type": "FILE_MODIFY",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7051,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1779,
+      "behavioral": 0.1304
+    },
+    "description": "Anomalous FILE_MODIFY detected for user_016. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-07.internal",
+    "dest_ip": "10.0.23.197"
+  },
+  {
+    "alert_id": "NG-000215",
+    "timestamp": "2026-03-07T08:44:00",
+    "user_id": "user_028",
+    "event_type": "FILE_DELETE",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7016,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.1378,
+      "behavioral": 0.1601
+    },
+    "description": "Anomalous FILE_DELETE detected for user_028. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-05.internal",
+    "dest_ip": "10.0.115.58"
+  },
+  {
+    "alert_id": "NG-000216",
+    "timestamp": "2026-03-07T21:50:40",
+    "user_id": "user_033",
+    "event_type": "NETWORK_TRANSFER",
+    "risk_level": "HIGH",
+    "ensemble_score": 0.6748,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.6888,
+      "isolation_forest": 0.3316,
+      "behavioral": 0.3454
+    },
+    "description": "Anomalous NETWORK_TRANSFER detected for user_033. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-11.internal",
+    "dest_ip": "10.0.110.219"
+  },
+  {
+    "alert_id": "NG-000217",
+    "timestamp": "2026-03-07T22:26:58",
+    "user_id": "user_046",
+    "event_type": "NETWORK_TRANSFER",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7768,
+    "model_scores": {
+      "autoencoder": 0.9479,
+      "lstm": 0.2904,
+      "isolation_forest": 0.8525,
+      "behavioral": 0.5828
+    },
+    "description": "Anomalous NETWORK_TRANSFER detected for user_046. Flagged by: Autoencoder (reconstruction), Isolation Forest (statistical). High model agreement (3/4 detectors triggered). Large data transfer: 49,873,540 bytes.",
+    "source_host": "host-05.internal",
+    "dest_ip": "134.7.88.111"
+  },
+  {
+    "alert_id": "NG-000218",
+    "timestamp": "2026-03-07T23:25:47",
+    "user_id": "user_022",
+    "event_type": "USB_INSERT",
+    "risk_level": "CRITICAL",
+    "ensemble_score": 0.7479,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 1.0,
+      "isolation_forest": 0.2744,
+      "behavioral": 0.2868
+    },
+    "description": "Anomalous USB_INSERT detected for user_022. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-01.internal",
+    "dest_ip": "10.0.115.58"
+  },
+  {
+    "alert_id": "NG-000219",
+    "timestamp": "2026-03-07T23:38:07",
+    "user_id": "user_005",
+    "event_type": "PROCESS_SPAWN",
+    "risk_level": "HIGH",
+    "ensemble_score": 0.6608,
+    "model_scores": {
+      "autoencoder": 1.0,
+      "lstm": 0.7016,
+      "isolation_forest": 0.2084,
+      "behavioral": 0.391
+    },
+    "description": "Anomalous PROCESS_SPAWN detected for user_005. Flagged by: Autoencoder (reconstruction), LSTM (sequence).",
+    "source_host": "host-04.internal",
+    "dest_ip": "10.0.173.198"
+  }
+]
