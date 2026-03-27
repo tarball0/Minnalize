@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'self'; img-src 'self' file: data:; style-src 'self' 'unsafe-inline'; script-src 'self';"
+  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Executable Grayscale Analyzer</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand-card">
+        <div class="brand-icon">🛡️</div>
+        <div>
+          <h1>ExeVision</h1>
+          <p>Executable Grayscale Analyzer</p>
+        </div>
+      </div>
+
+      <div class="side-panel">
+        <h3>Workflow</h3>
+        <ol>
+          <li>Select an EXE or DLL</li>
+          <li>Run structural analysis</li>
+          <li>Inspect score, sections, and image</li>
+        </ol>
+      </div>
+
+      <div class="side-panel">
+        <h3>What it checks</h3>
+        <ul>
+          <li>PE parsing</li>
+          <li>Section entropy</li>
+          <li>Import count</li>
+          <li>Suspicious section names</li>
+          <li>Byte-image pattern</li>
+        </ul>
+      </div>
+
+      <div class="side-panel muted">
+        <h3>Note</h3>
+        <p>This is an explainable hackathon MVP, not a full antivirus engine.</p>
+      </div>
+    </aside>
+
+    <main class="main-panel">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Desktop Malware Triage</p>
+          <h2>Analyze suspicious executables with a cleaner UI</h2>
+        </div>
+        <div class="status-pill" id="statusPill">Idle</div>
+      </header>
+
+      <section class="hero-grid">
+        <div class="upload-card">
+          <div id="dropZone" class="drop-zone">
+            <div class="drop-icon">📂</div>
+            <h3>Drag and drop a file here</h3>
+            <p>or choose a file manually</p>
+            <div class="button-row">
+              <button id="chooseBtn" class="btn btn-primary">Choose File</button>
+              <button id="analyzeBtn" class="btn btn-accent" disabled>Analyze</button>
+            </div>
+          </div>
+
+          <div class="selected-file">
+            <div>
+              <span class="label">Selected file</span>
+              <p id="fileName">No file selected</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="score-card">
+          <div class="score-card-head">
+            <span>Suspicion Score</span>
+            <span id="scoreLabel" class="badge">Waiting</span>
+          </div>
+
+          <div class="score-ring-wrap">
+            <div class="score-ring">
+              <div class="score-ring-inner">
+                <span id="scoreValue">--</span>
+                <small>/100</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="meter">
+            <div id="meterBar" class="meter-bar"></div>
+          </div>
+
+          <p id="scoreSummary" class="summary-text">
+            Select a file and run analysis to see the score.
+          </p>
+        </div>
+      </section>
+
+      <section class="content-grid">
+        <div class="panel image-panel">
+          <div class="panel-head">
+            <h3>Grayscale Byte Image</h3>
+            <span class="chip">Visual signature</span>
+          </div>
+          <div class="image-wrap">
+            <img id="resultImage" alt="Generated grayscale image" />
+            <div id="imagePlaceholder" class="placeholder">No image yet</div>
+          </div>
+        </div>
+
+        <div class="panel feature-panel">
+          <div class="panel-head">
+            <h3>PE Overview</h3>
+            <span class="chip">Static features</span>
+          </div>
+
+          <div class="stats-grid">
+            <div class="stat">
+              <span>Valid PE</span>
+              <strong id="isPe">--</strong>
+            </div>
+            <div class="stat">
+              <span>Sections</span>
+              <strong id="numSections">--</strong>
+            </div>
+            <div class="stat">
+              <span>Avg Entropy</span>
+              <strong id="avgEntropy">--</strong>
+            </div>
+            <div class="stat">
+              <span>Imports</span>
+              <strong id="importsCount">--</strong>
+            </div>
+          </div>
+
+          <div class="detail-block">
+            <h4>Section Names</h4>
+            <div id="sectionNames" class="tag-wrap"></div>
+          </div>
+
+          <div class="detail-block">
+            <h4>Reasons</h4>
+            <ul id="reasonList" class="reason-list"></ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel explanation-panel">
+        <div class="panel-head">
+          <h3>Explanation</h3>
+          <span class="chip">Human readable</span>
+        </div>
+        <pre id="explanationText" class="explanation-text">No explanation yet</pre>
+      </section>
+    </main>
+  </div>
+
+  <div id="loadingOverlay" class="loading-overlay hidden">
+    <div class="loader-card">
+      <div class="spinner"></div>
+      <h3>Analyzing file...</h3>
+      <p>Please wait while the Python backend extracts features.</p>
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
