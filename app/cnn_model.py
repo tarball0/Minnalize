@@ -6,10 +6,9 @@ from typing import Any
 import numpy as np
 from PIL import Image
 
-MODEL_PATH = Path("app/models/ResNet-custom.pth")
+MODEL_PATH = Path(__file__).resolve().parent / "models" / "ResNet-custom.pth"
 INPUT_SIZE = 32
 NUM_CLASSES = 8
-
 
 def _safe_import_torch():
     try:
