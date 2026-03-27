@@ -1,6 +1,5 @@
 {
   "name": "exevision",
-  "productName": "ExeVision",
   "version": "1.0.0",
   "description": "Electron UI for executable grayscale analyzer",
   "main": "electron/main.js",
@@ -8,7 +7,7 @@
     "start": "electron ."
   },
   "dependencies": {
-    "chokidar": "^5.0.0"
+    "chokidar": "^4.0.3"
   },
   "devDependencies": {
     "electron": "^37.2.0"
