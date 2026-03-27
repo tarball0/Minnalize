@@ -1,6 +1,5 @@
-streamlit
-pefile
 numpy
-pillow
-matplotlib
-pandas
+Pillow
+pefile
+torch
+torchvision
