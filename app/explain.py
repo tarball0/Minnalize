@@ -31,11 +31,11 @@ def build_explanation(
 
     if cnn_info and cnn_info.get("available"):
         lines.append(
-            f"A pretrained CNN backbone ({cnn_info.get('model_name', 'CNN')}) also inspected the grayscale byte image. "
-            f"It produced a visual anomaly score of {cnn_info.get('visual_score', 0)}/100."
+            f"A pretrained CNN feature extractor ({cnn_info.get('model_name', 'CNN')}) also inspected the grayscale byte image. "
+            f"It produced a visual texture score of {cnn_info.get('visual_score', 0)}/100."
         )
         lines.append(
-            f"This CNN is used only as a supporting visual signal, not as a final malware verdict."
+            "This CNN is only an auxiliary signal. It cannot by itself push a low-risk PE file into a high-risk verdict."
         )
     elif cnn_info:
         lines.append(
@@ -49,8 +49,13 @@ def build_explanation(
 
     if score_info.get("cnn_used"):
         lines.append(
-            f"The final score blends the PE rule score ({score_info.get('rule_score', 0)}/100) "
-            f"with the CNN visual score ({score_info.get('cnn_visual_score', 0)}/100)."
+            f"The final score starts from the PE rule score ({score_info.get('rule_score', 0)}/100) "
+            f"and then adds a limited CNN bonus (+{score_info.get('cnn_bonus', 0)})."
+        )
+    else:
+        lines.append(
+            f"The final score is driven by the PE rule score ({score_info.get('rule_score', 0)}/100). "
+            "No CNN bonus was applied."
         )
 
     if score_info["reasons"]:
@@ -60,7 +65,7 @@ def build_explanation(
 
     lines.append(
         "This is a hackathon MVP and not a full antivirus engine. "
-        "It gives an explainable early warning based on PE structure, entropy, and pretrained CNN visual analysis."
+        "It gives an explainable early warning based mainly on PE structure, with the CNN used only as a small supporting signal."
     )
 
     return "\n".join(lines)
