@@ -87,14 +87,23 @@ function scoreTone(score) {
 }
 
 function renderResult(result) {
-  const peInfo = result.pe_info;
-  const scoreInfo = result.score_info;
-  const imageInfo = result.image_info;
+  const peInfo = result.pe_info || {};
+  const scoreInfo = result.score_info || {};
+  const imageInfo = result.image_info || {};
+  const cnnInfo = result.cnn_info || {};
 
-  scoreValue.textContent = String(scoreInfo.score);
-  scoreLabel.textContent = scoreInfo.label;
-  meterBar.style.width = `${scoreInfo.score}%`;
-  scoreSummary.textContent = `${scoreTone(scoreInfo.score)} based on entropy, imports, PE structure, and suspicious section names.`;
+  scoreValue.textContent = String(scoreInfo.score ?? '--');
+  scoreLabel.textContent = scoreInfo.label || 'Waiting';
+  meterBar.style.width = `${scoreInfo.score ?? 0}%`;
+
+  if (scoreInfo.cnn_used) {
+    scoreSummary.textContent =
+      `${scoreTone(scoreInfo.score)} based on PE rules (${scoreInfo.rule_score}/100) ` +
+      `plus pretrained CNN visual signal (${scoreInfo.cnn_visual_score}/100).`;
+  } else {
+    scoreSummary.textContent =
+      `${scoreTone(scoreInfo.score ?? 0)} based on entropy, imports, PE structure, and suspicious section names.`;
+  }
 
   isPe.textContent = peInfo.is_pe ? 'Yes' : 'No';
   numSections.textContent = String(peInfo.num_sections ?? 0);
@@ -111,6 +120,8 @@ function renderResult(result) {
   reasonList.innerHTML = '';
   if (scoreInfo.reasons && scoreInfo.reasons.length) {
     scoreInfo.reasons.forEach((reason) => addReason(reason));
+  } else if (cnnInfo.available && cnnInfo.reasons && cnnInfo.reasons.length) {
+    cnnInfo.reasons.forEach((reason) => addReason(`CNN: ${reason}`));
   } else {
     addReason('No major suspicious indicators were triggered by the current rules.');
   }
