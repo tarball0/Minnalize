@@ -22,6 +22,9 @@ let tray = null;
 let watcher = null;
 let isQuitting = false;
 
+let lastAutoScanSuccess = null;
+let lastAutoScanError = null;
+
 const activeScans = new Set();
 const scannedFingerprints = new Map();
 
@@ -69,6 +72,34 @@ function showMainWindow() {
   if (mainWindow.isMinimized()) mainWindow.restore();
   mainWindow.show();
   mainWindow.focus();
+}
+
+function sendAutoScanSuccessToRenderer(payload) {
+  if (!mainWindow || mainWindow.isDestroyed()) return;
+
+  if (mainWindow.webContents.isLoading()) {
+    mainWindow.webContents.once('did-finish-load', () => {
+      if (!mainWindow || mainWindow.isDestroyed()) return;
+      mainWindow.webContents.send('autoscan:complete', payload);
+    });
+    return;
+  }
+
+  mainWindow.webContents.send('autoscan:complete', payload);
+}
+
+function sendAutoScanErrorToRenderer(payload) {
+  if (!mainWindow || mainWindow.isDestroyed()) return;
+
+  if (mainWindow.webContents.isLoading()) {
+    mainWindow.webContents.once('did-finish-load', () => {
+      if (!mainWindow || mainWindow.isDestroyed()) return;
+      mainWindow.webContents.send('autoscan:error', payload);
+    });
+    return;
+  }
+
+  mainWindow.webContents.send('autoscan:error', payload);
 }
 
 function createTray() {
@@ -215,6 +246,40 @@ async function ensureStableFile(filePath, checks = 3, delayMs = 1500) {
   return lastSignature;
 }
 
+function showSuccessNotification(filePath, result) {
+  if (!Notification.isSupported()) return;
+
+  const payload = { filePath, result };
+  const notification = new Notification({
+    title: 'ExeVision auto-scan complete',
+    body: `${path.basename(filePath)} → ${result.score_info?.label || 'Done'} (${result.score_info?.score ?? '--'}/100)`
+  });
+
+  notification.on('click', () => {
+    showMainWindow();
+    sendAutoScanSuccessToRenderer(payload);
+  });
+
+  notification.show();
+}
+
+function showErrorNotification(filePath, errorMessage) {
+  if (!Notification.isSupported()) return;
+
+  const payload = { filePath, error: errorMessage };
+  const notification = new Notification({
+    title: 'ExeVision auto-scan failed',
+    body: `${path.basename(filePath)} → ${errorMessage}`
+  });
+
+  notification.on('click', () => {
+    showMainWindow();
+    sendAutoScanErrorToRenderer(payload);
+  });
+
+  notification.show();
+}
+
 async function autoAnalyzeFile(filePath) {
   if (!isWatchedExecutable(filePath)) return;
   if (activeScans.has(filePath)) return;
@@ -231,29 +296,19 @@ async function autoAnalyzeFile(filePath) {
     const result = await runAnalysis(filePath);
     scannedFingerprints.set(filePath, fingerprint);
 
-    if (mainWindow && !mainWindow.isDestroyed()) {
-      mainWindow.webContents.send('autoscan:complete', { filePath, result });
-    }
+    lastAutoScanSuccess = { filePath, result };
+    lastAutoScanError = null;
 
-    if (Notification.isSupported()) {
-      new Notification({
-        title: 'ExeVision auto-scan complete',
-        body: `${path.basename(filePath)} → ${result.score_info?.label || 'Done'} (${result.score_info?.score ?? '--'}/100)`
-      }).show();
-    }
+    sendAutoScanSuccessToRenderer(lastAutoScanSuccess);
+    showSuccessNotification(filePath, result);
   } catch (error) {
     const message = String(error);
 
-    if (mainWindow && !mainWindow.isDestroyed()) {
-      mainWindow.webContents.send('autoscan:error', { filePath, error: message });
-    }
+    lastAutoScanError = { filePath, error: message };
+    lastAutoScanSuccess = null;
 
-    if (Notification.isSupported()) {
-      new Notification({
-        title: 'ExeVision auto-scan failed',
-        body: `${path.basename(filePath)} → ${message}`
-      }).show();
-    }
+    sendAutoScanErrorToRenderer(lastAutoScanError);
+    showErrorNotification(filePath, message);
   } finally {
     activeScans.delete(filePath);
   }
@@ -308,6 +363,14 @@ ipcMain.handle('analysis:run', async (_event, filePath) => {
   return await runAnalysis(filePath);
 });
 
+ipcMain.handle('autoscan:getLastResult', async () => {
+  return lastAutoScanSuccess;
+});
+
+ipcMain.handle('autoscan:getLastError', async () => {
+  return lastAutoScanError;
+});
+
 app.whenReady().then(() => {
   createWindow();
   createTray();
@@ -332,6 +395,5 @@ app.on('before-quit', async () => {
 });
 
 app.on('window-all-closed', () => {
-  // Intentionally do nothing.
-  // The app stays alive in the tray and keeps watching Downloads.
+  // Keep running in tray.
 });
