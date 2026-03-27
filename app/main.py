@@ -6,9 +6,10 @@ from app.image_convertor import bytes_to_grayscale_image
 from app.pe_features import extract_pe_features
 from app.scorer import compute_suspicion_score
 from app.explain import build_explanation
-from app.cnn_model import analyze_image_with_pretrained_cnn
+from app.cnn_model import analyze_image_with_malware_cnn
 
-MAX_IMAGE_BYTES = 8 * 1024 * 1024  # up to 8 MB sampled for image generation
+MAX_IMAGE_BYTES = 8 * 1024 * 1024
+MALWARE_CNN_WEIGHTS = Path("app/models/malware_cnn_resnet18.pth")
 
 
 def analyze_file(file_path: str) -> dict:
@@ -25,7 +26,10 @@ def analyze_file(file_path: str) -> dict:
     )
 
     pe_info = extract_pe_features(str(file_path))
-    cnn_info = analyze_image_with_pretrained_cnn(image_info["image_path"])
+    cnn_info = analyze_image_with_malware_cnn(
+        image_info["image_path"],
+        weights_path=MALWARE_CNN_WEIGHTS,
+    )
     score_info = compute_suspicion_score(pe_info, cnn_info)
     explanation = build_explanation(pe_info, score_info, image_info, cnn_info)
 
