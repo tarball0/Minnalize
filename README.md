@@ -32,7 +32,10 @@ Cybersecurity and Adaptive Threat Intelligence
 Detecting anomalous behaviour in digital systems
 
 ### 💡 Solution:
-Minnalize is a malware triage project for Windows executables. It analyzes .exe and .dll files by checking their PE structure, inspecting digital signatures, and using image-based AI on the binary data to estimate how suspicious the file is.
+Minnalize is a malware triage project for Windows executables.
+It analyzes .exe and .dll files by checking their PE structure,
+inspecting digital signatures, and using image-based AI 
+on the binary data to estimate how suspicious the file is.
 ```
 ---
 
