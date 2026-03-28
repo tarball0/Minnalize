@@ -3,5 +3,4 @@ node_modules/
 outputs/
 __pycache__/
 *.py[cod]
-progress/
 Testing/VSCodeUserSetup-x64-1.113.0 (1).exe
