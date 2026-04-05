@@ -1,53 +1,45 @@
-# 🚀 Welcome to NEXUS
+# Minnalize
 
-### Conducted by | CLIQUE x ACM MITS |
+Minnalize is a binary visualization and malware classification tool developed for the ACM MITS Hackathon. It performs malware triage by combining static PE header analysis, Authenticode signature verification, and computer vision using a fine-tuned Convolutional Neural Network (CNN).
 
-### 📅 March 27 & 28
+The project converts executable binaries into grayscale images to identify structural patterns and anomalies that traditional static analysis might miss.
 
-### 📍 Muthoot Institute of Technology and Science
+## Features
 
-<p align="center">
-  <img src="template_acm.png" width="500"/>
-  <img src="template_clique.png" width="250"/>
-</p>
+*   Binary-to-Image Conversion: Transforms .exe files into grayscale images using Nataraj-style width mapping. This process preserves the spatial correlation of byte sequences, making malicious patterns visible to vision models.
+*   Deep Learning Classification: Employs a fine-tuned EfficientNet-B0 model (PyTorch) trained on image representations of both benign and malicious binary samples.
+*   Static PE Analysis: Extracts features such as section entropy, import counts, and suspicious API calls (e.g., VirtualAlloc, LoadLibrary) using the pefile library.
+*   Authenticode Signature Verification: Utilizes Windows PowerShell features (Get-AuthenticodeSignature) to verify file integrity and check for trusted publishers.
+*   Hybrid Scoring Engine: Aggregates visual signals, static rules, and signature metadata into a final suspicion score (0-100).
+*   Report Generation: Provides human-readable explanations for the assigned risk level, detailing specific PE anomalies or CNN confidence margins.
+*   Electron Interface: A desktop UI built with Electron for file ingestion and result visualization.
 
----
+## Technical Stack
 
-### 📖 Description
+*   Frontend: Electron, JavaScript, HTML, CSS.
+*   Backend: Python 3.
+*   Libraries: PyTorch, Torchvision, NumPy, Pillow, pefile.
+*   System Integration: Windows PowerShell.
 
-A **16-hour hackathon** across various domains where innovation meets execution. Build, collaborate, and push your limits.
+## Architecture
 
----
+1.  Ingestion: The user selects a file via the Electron UI.
+2.  Signature Check: The system first checks for an Authenticode signature. Valid signatures from trusted publishers (e.g., Microsoft, Google) significantly reduce the suspicion score.
+3.  PE Parsing: The PE header is parsed for structural anomalies, high entropy (indicating packing or encryption), and suspicious imports.
+4.  Visualization: The binary is mapped to a grayscale image. The image width is adjusted based on file size to maintain consistent pattern density.
+5.  CNN Inference: If the file is unsigned or suspicious, the image is passed to EfficientNet-B0 to detect malicious visual fingerprints.
+6.  Fusion: The final verdict uses a weighted blend of the CNN output (70%) and PE rules (30%) for unsigned files.
 
-## 🧠 Project Details (To be filled by participants)
+## Authors
 
-```md
-### 🏷️ Project Name:
-Minnalize
+*   Chris Paul (tarball0)
+*   Fahad (Fahad-uz)
+*   Aidan Jason (AidanJ07)
 
-### 🎯 Chosen Domain:
-Cybersecurity and Adaptive Threat Intelligence
+## Requirements
 
-### ❗ Problem Statement:
-Detecting anomalous behaviour in digital systems
+*   OS: Windows (Required for full PowerShell signature verification).
+*   Python 3.8+ with torch, torchvision, pefile, and numpy.
+*   Node.js for the Electron frontend.
 
-### 💡 Solution:
-Minnalize is a malware triage project for Windows executables.
-It analyzes .exe and .dll files by checking their PE structure,
-inspecting digital signatures, and using image-based AI 
-on the binary data to estimate how suspicious the file is.
-```
----
-
-## 🎯 Hackathon Domains
-
-Participants must choose **one** of the following domains:
-
-1️⃣ Digital Asset Protection
-2️⃣ Smart Supply Chains
-3️⃣ Digital Health & Predictive Care
-4️⃣ Climate Intelligence
-5️⃣ Cybersecurity & Threat Intelligence ✅ 
-
----
-
+Developed for the ACM MITS Hackathon.
